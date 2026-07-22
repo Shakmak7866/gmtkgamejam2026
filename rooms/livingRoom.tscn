@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bc0ny25ebxvn0"]
+
+[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_67bru"]
+
+[node name="Node2D" type="Node2D" unique_id=824796416]
+
+[node name="LivingRoom" type="Sprite2D" parent="." unique_id=1499970354]
+position = Vector2(508, 252)
+texture = ExtResource("1_67bru")

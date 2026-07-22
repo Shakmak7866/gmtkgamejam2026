@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b8vsctr4irdm"]
+
+[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_1ycpb"]
+
+[node name="Node2D" type="Node2D" unique_id=1616739569]
+
+[node name="HallwayEndless" type="Sprite2D" parent="." unique_id=1773994247]
+position = Vector2(539, 247)
+texture = ExtResource("1_1ycpb")
