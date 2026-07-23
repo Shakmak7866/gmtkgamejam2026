@@ -38,4 +38,5 @@ position = Vector2(33, -664)
 zoom = Vector2(0.35, 0.35)
 
 [connection signal="body_entered" from="Dinner" to="." method="_on_dinner_body_entered"]
+[connection signal="body_exited" from="Dinner" to="." method="_on_dinner_body_exited"]
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
