@@ -1,9 +1,38 @@
 [gd_scene format=3 uid="uid://dj81l0hotm14i"]
 
 [ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_el7b0"]
+[ext_resource type="Script" uid="uid://g0k5v5bijjg2" path="res://rooms/kitchen.gd" id="1_y7esr"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_rxrga"]
+[ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_gbg02"]
+[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_hefk4"]
 
-[node name="Node2D" type="Node2D" unique_id=2125318124]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_home2"]
+size = Vector2(185, 123.5)
+
+[node name="Kitchen" type="Node2D" unique_id=2125318124]
+script = ExtResource("1_y7esr")
 
 [node name="Kitchen" type="Sprite2D" parent="." unique_id=1956523956]
-position = Vector2(556, 299)
+position = Vector2(0, -2)
+scale = Vector2(2, 2)
 texture = ExtResource("1_el7b0")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_rxrga")]
+position = Vector2(-2, 687)
+
+[node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_gbg02")]
+position = Vector2(787, -213)
+
+[node name="Dishes" type="Area2D" parent="." unique_id=255442803]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dishes" unique_id=611041949]
+position = Vector2(1.5, -487.75)
+shape = SubResource("RectangleShape2D_home2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Dishes" unique_id=1196851508]
+position = Vector2(3, -486.00003)
+scale = Vector2(1.285, 1.285)
+texture = ExtResource("5_hefk4")
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
+[connection signal="body_entered" from="Dishes" to="." method="_on_dishes_body_entered"]

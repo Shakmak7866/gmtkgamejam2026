@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://yk2pe73jftv5"]
 
+[ext_resource type="Script" uid="uid://cnrnb2684ooma" path="res://rooms/hallway.gd" id="1_hwu5l"]
 [ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_y0ln7"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_pf4c8"]
+[ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_bynws"]
 
-[node name="Node2D" type="Node2D" unique_id=1585987424]
+[node name="Hallway" type="Node2D" unique_id=1585987424]
+script = ExtResource("1_hwu5l")
 
 [node name="Hallway" type="Sprite2D" parent="." unique_id=789371761]
-position = Vector2(7, 7)
-scale = Vector2(3.9887502, 4.2325006)
+position = Vector2(2.0000038, 7)
+scale = Vector2(1.6225, 2.08)
 texture = ExtResource("1_y0ln7")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_pf4c8")]
+position = Vector2(6, 646)
+
+[node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_bynws")]
+position = Vector2(-648, -406)
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

@@ -1,9 +1,38 @@
 [gd_scene format=3 uid="uid://bjp4uty3yb33i"]
 
 [ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_fbfqf"]
+[ext_resource type="Script" uid="uid://ctxkddbvma05n" path="res://rooms/dining_room.gd" id="1_x2tpo"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_nok4x"]
+[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_rf3at"]
+[ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="5_pq6ch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65ouq"]
+size = Vector2(83.5, 84.5)
 
 [node name="Node2D" type="Node2D" unique_id=658309079]
+script = ExtResource("1_x2tpo")
 
 [node name="DiningRoom" type="Sprite2D" parent="." unique_id=1921158363]
-position = Vector2(504, 212)
+position = Vector2(91.87496, -80.62503)
+scale = Vector2(2, 2)
 texture = ExtResource("1_fbfqf")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_nok4x")]
+position = Vector2(777, 331)
+
+[node name="Dinner" type="Area2D" parent="." unique_id=1934380990]
+position = Vector2(67, -248)
+scale = Vector2(2, 2)
+
+[node name="Bear" type="Sprite2D" parent="Dinner" unique_id=1127191044]
+texture = ExtResource("4_rf3at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner" unique_id=588759396]
+position = Vector2(-0.75, -0.75)
+shape = SubResource("RectangleShape2D_65ouq")
+
+[node name="Door" parent="." unique_id=626891781 instance=ExtResource("5_pq6ch")]
+position = Vector2(33, -664)
+
+[connection signal="body_entered" from="Dinner" to="." method="_on_dinner_body_entered"]
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
