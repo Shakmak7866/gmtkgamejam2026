@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://b4qqbqi6f2s0i"]
 
 [ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_av4kn"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_8aicu"]
 
 [node name="Node2D" type="Node2D" unique_id=1964350650]
 
 [node name="HallwayNormal" type="Sprite2D" parent="." unique_id=968495403]
 position = Vector2(486, 237)
 texture = ExtResource("1_av4kn")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_8aicu")]
+position = Vector2(478, 550)
