@@ -5,11 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_ewctb"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_g8umw"]
 [ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_ckofh"]
+[ext_resource type="PackedScene" uid="uid://y4uoh4srrpqa" path="res://trash.tscn" id="6_ckofh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73bni"]
 
-[node name="LivingRoom" type="Node2D" unique_id=824796416]
+[node name="LivingRoom" type="Node2D" unique_id=824796416 node_paths=PackedStringArray("trash")]
 script = ExtResource("1_vsc2m")
+trash = [NodePath("Trash"), NodePath("Trash2"), NodePath("Trash3"), NodePath("Trash4"), NodePath("Trash5"), NodePath("Trash6"), NodePath("Trash7")]
 
 [node name="LivingRoom" type="Sprite2D" parent="." unique_id=1499970354]
 position = Vector2(1, -1)
@@ -36,5 +38,27 @@ texture = ExtResource("5_ckofh")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1453612959]
 zoom = Vector2(0.25, 0.25)
 
+[node name="Trash" parent="." unique_id=1756980037 instance=ExtResource("6_ckofh")]
+position = Vector2(-843, 266)
+
+[node name="Trash2" parent="." unique_id=2638265 instance=ExtResource("6_ckofh")]
+position = Vector2(342, 870)
+
+[node name="Trash3" parent="." unique_id=1600778280 instance=ExtResource("6_ckofh")]
+position = Vector2(771, 342)
+
+[node name="Trash4" parent="." unique_id=435577614 instance=ExtResource("6_ckofh")]
+position = Vector2(-209, 502)
+
+[node name="Trash5" parent="." unique_id=1594668141 instance=ExtResource("6_ckofh")]
+position = Vector2(-361, -273)
+
+[node name="Trash6" parent="." unique_id=8557124 instance=ExtResource("6_ckofh")]
+position = Vector2(707, -300)
+
+[node name="Trash7" parent="." unique_id=1885420294 instance=ExtResource("6_ckofh")]
+position = Vector2(376, 152)
+
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Desk" to="." method="_on_desk_body_entered"]
+[connection signal="body_exited" from="Desk" to="." method="_on_desk_body_exited"]

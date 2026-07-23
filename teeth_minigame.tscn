@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bxrixpm3p2ad1"]
+
+[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="1_hvh4i"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=243442422]
+
+[node name="Control" type="Control" parent="." unique_id=1459830360]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1146521401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Control/Panel" unique_id=1820233580]
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Panel/SubViewport" unique_id=1355657478]
+texture = ExtResource("1_hvh4i")

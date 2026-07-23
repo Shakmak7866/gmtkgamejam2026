@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cuet76of8k7nh"]
+
+[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="1_d1dx2"]
+[ext_resource type="Script" uid="uid://cb4ndv5nolt70" path="res://paint.gd" id="2_kh476"]
+[ext_resource type="Shader" uid="uid://by12373nrb7ar" path="res://painting.gdshader" id="3_kh476"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kh476"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3jie2"]
+resource_local_to_scene = true
+shader = ExtResource("3_kh476")
+shader_parameter/mask = SubResource("ViewportTexture_kh476")
+
+[node name="Node2D" type="Node2D" unique_id=1561451094]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2038695668]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1147, 647)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport" unique_id=1673677691]
+texture = ExtResource("1_d1dx2")
+script = ExtResource("2_kh476")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1037891706]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=950334395]
+material = SubResource("ShaderMaterial_3jie2")
+position = Vector2(571, 314)
+scale = Vector2(8.96875, 5.0625)
+texture = ExtResource("1_d1dx2")
