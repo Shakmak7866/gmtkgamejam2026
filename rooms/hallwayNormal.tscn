@@ -38,5 +38,7 @@ texture = ExtResource("5_6g852")
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_8aicu")]
 position = Vector2(473, 128)
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=166205543]
+
 [connection signal="body_entered" from="BathroomDoor" to="." method="_on_bathroom_door_body_entered"]
 [connection signal="body_entered" from="BedroomDoor" to="." method="_on_bedroom_door_body_entered"]

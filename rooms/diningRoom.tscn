@@ -34,5 +34,8 @@ shape = SubResource("RectangleShape2D_65ouq")
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("5_pq6ch")]
 position = Vector2(33, -664)
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1016144619]
+zoom = Vector2(0.35, 0.35)
+
 [connection signal="body_entered" from="Dinner" to="." method="_on_dinner_body_entered"]
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

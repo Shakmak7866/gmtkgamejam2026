@@ -15,6 +15,8 @@ texture = ExtResource("1_1ycpb")
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_mu402")]
 position = Vector2(603, 311)
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=588981827]
+
 [node name="Dunk" type="Sprite2D" parent="." unique_id=586236915]
 position = Vector2(1328.0001, 328.00003)
 scale = Vector2(0.495, 0.495)

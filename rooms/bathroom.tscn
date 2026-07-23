@@ -49,6 +49,9 @@ shape = SubResource("RectangleShape2D_jpfer")
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("5_3xuc0")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=227771916]
+zoom = Vector2(0.35, 0.35)
+
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Toothbrush" to="." method="_on_toothbrush_body_entered"]
 [connection signal="body_entered" from="Bath" to="." method="_on_bath_body_entered"]
