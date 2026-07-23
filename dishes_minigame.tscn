@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ccob178337hky"]
+
+[ext_resource type="Texture2D" uid="uid://5cgj1rh3oyxh" path="res://tempsink.jpg" id="1_i2b4a"]
+[ext_resource type="Script" uid="uid://b25naj25w7ony" path="res://dishes_minigame.gd" id="1_jqw07"]
+[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="2_jqw07"]
+[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="3_eddo7"]
+[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="4_stjox"]
+[ext_resource type="Texture2D" uid="uid://cnny7f3h4pgpa" path="res://johnrod.png" id="5_f7h4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avm82"]
+size = Vector2(154, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqw07"]
+size = Vector2(20, 218)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=272616341]
+script = ExtResource("1_jqw07")
+dirty_textures = Array[Texture2D]([ExtResource("2_jqw07"), ExtResource("3_eddo7"), ExtResource("4_stjox"), ExtResource("5_f7h4t")])
+clean_textures = Array[Texture2D]([ExtResource("2_jqw07"), ExtResource("3_eddo7"), ExtResource("4_stjox"), ExtResource("5_f7h4t")])
+
+[node name="Control" type="Control" parent="." unique_id=882163951]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=916015979]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Tempsink" type="Sprite2D" parent="Control/Panel" unique_id=985769065]
+position = Vector2(574.5, 318.49997)
+scale = Vector2(1.7484374, 1.28125)
+texture = ExtResource("1_i2b4a")
+
+[node name="DirtyDishes" type="TextureRect" parent="Control/Panel" unique_id=1816050591]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 249.0
+offset_right = 307.0
+offset_bottom = 404.0
+texture = ExtResource("2_jqw07")
+
+[node name="CleanDishes" type="TextureRect" parent="Control/Panel" unique_id=379635468]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 279.0
+offset_right = 928.0
+offset_bottom = 418.0
+texture = ExtResource("2_jqw07")
+
+[node name="Pickup" type="Area2D" parent="." unique_id=942899286]
+position = Vector2(229, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup" unique_id=591598580]
+shape = SubResource("RectangleShape2D_avm82")
+
+[node name="Scrub" type="Area2D" parent="." unique_id=1459581273]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scrub" unique_id=208850291]
+position = Vector2(580, 317.99997)
+rotation = -0.6803179
+shape = SubResource("RectangleShape2D_jqw07")
+
+[connection signal="mouse_entered" from="Pickup" to="." method="_on_pickup_mouse_entered"]
+[connection signal="mouse_exited" from="Pickup" to="." method="_on_pickup_mouse_exited"]
+[connection signal="mouse_entered" from="Scrub" to="." method="_on_scrub_mouse_entered"]
+[connection signal="mouse_exited" from="Scrub" to="." method="_on_scrub_mouse_exited"]
