@@ -1,9 +1,26 @@
 [gd_scene format=3 uid="uid://b8vsctr4irdm"]
 
 [ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_1ycpb"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_mu402"]
+[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="3_xwvkv"]
+[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_xwvkv"]
 
-[node name="Node2D" type="Node2D" unique_id=1616739569]
+[node name="HallwayEndless" type="Node2D" unique_id=1616739569]
 
 [node name="HallwayEndless" type="Sprite2D" parent="." unique_id=1773994247]
-position = Vector2(539, 247)
+position = Vector2(-2580.0005, 314)
+scale = Vector2(9.427501, 0.815)
 texture = ExtResource("1_1ycpb")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_mu402")]
+position = Vector2(603, 311)
+
+[node name="Dunk" type="Sprite2D" parent="." unique_id=586236915]
+position = Vector2(1328.0001, 328.00003)
+scale = Vector2(0.495, 0.495)
+texture = ExtResource("3_xwvkv")
+
+[node name="Bear" type="Sprite2D" parent="." unique_id=1497546731]
+position = Vector2(-6135.25, 368)
+scale = Vector2(1.4882352, 1.6046512)
+texture = ExtResource("4_xwvkv")

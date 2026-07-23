@@ -1,9 +1,54 @@
 [gd_scene format=3 uid="uid://27ksbbvtat4s"]
 
 [ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_f3ki0"]
+[ext_resource type="Script" uid="uid://bvata31d81sx1" path="res://rooms/bathroom.gd" id="1_px0fc"]
+[ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="2_wq0g2"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_px0fc"]
+[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_en77f"]
+[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="5_3xuc0"]
 
-[node name="Node2D" type="Node2D" unique_id=331719233]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fup3h"]
+size = Vector2(88, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpfer"]
+size = Vector2(395.98016, 192.82794)
+
+[node name="Bathroom" type="Node2D" unique_id=331719233]
+script = ExtResource("1_px0fc")
 
 [node name="Bathroom" type="Sprite2D" parent="." unique_id=1985826265]
-position = Vector2(517, 290)
+position = Vector2(-3, 5)
+scale = Vector2(2, 2)
 texture = ExtResource("1_f3ki0")
+
+[node name="Door" parent="." unique_id=626891781 instance=ExtResource("2_wq0g2")]
+position = Vector2(-5, 798)
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_px0fc")]
+position = Vector2(-4, 628)
+
+[node name="Toothbrush" type="Area2D" parent="." unique_id=1928130820]
+position = Vector2(1, -489)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Toothbrush" unique_id=955277692]
+shape = SubResource("RectangleShape2D_fup3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Toothbrush" unique_id=1201806369]
+texture = ExtResource("4_en77f")
+
+[node name="Bath" type="Area2D" parent="." unique_id=1493869331]
+position = Vector2(553, -495)
+rotation = 0.0016087106
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bath" unique_id=2086216633]
+position = Vector2(-5.8568115, -1.0859985)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_jpfer")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bath" unique_id=2105808010]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("5_3xuc0")
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
+[connection signal="body_entered" from="Toothbrush" to="." method="_on_toothbrush_body_entered"]
+[connection signal="body_entered" from="Bath" to="." method="_on_bath_body_entered"]
