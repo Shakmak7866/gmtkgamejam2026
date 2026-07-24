@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("interact") and cleaning_range:
-		#eatingminigame
 		cleaning = true
 		start_minigame()
 

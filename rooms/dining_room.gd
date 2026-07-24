@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("interact") and dinner_range:
-		#eatingminigame
+		eating = true
 		start_minigame()
 
 
@@ -37,5 +37,6 @@ func start_minigame():
 	eating_minigame.tree_exited.connect(_on_minigame_finished)
 
 func _on_minigame_finished():
+	eating = false
 	dinner_eaten = true
 	print("Im Full")
