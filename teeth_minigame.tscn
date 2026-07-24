@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bxrixpm3p2ad1"]
 
-[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="1_hvh4i"]
+[ext_resource type="Script" uid="uid://cdqjtaxqcphxf" path="res://teeth_minigame.gd" id="1_gedxa"]
+[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="2_gedxa"]
+[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="3_gedxa"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=243442422]
+script = ExtResource("1_gedxa")
 
 [node name="Control" type="Control" parent="." unique_id=1459830360]
 layout_mode = 3
@@ -21,7 +24,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SubViewport" type="SubViewport" parent="Control/Panel" unique_id=1820233580]
+[node name="CleanTeeth" type="Sprite2D" parent="." unique_id=1842920560]
+position = Vector2(578, 321)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_gedxa")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/Panel/SubViewport" unique_id=1355657478]
-texture = ExtResource("1_hvh4i")
+[node name="DirtyTeeth" type="Sprite2D" parent="." unique_id=1064220562]
+position = Vector2(579.50006, 321.50003)
+scale = Vector2(0.49125, 0.75875)
+texture = ExtResource("3_gedxa")

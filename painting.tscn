@@ -1,15 +1,51 @@
-[gd_scene format=3 uid="uid://cuet76of8k7nh"]
+[gd_scene format=3 uid="uid://d4m8di5n266rb"]
 
 [ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="1_d1dx2"]
-[ext_resource type="Script" uid="uid://cb4ndv5nolt70" path="res://paint.gd" id="2_kh476"]
-[ext_resource type="Shader" uid="uid://by12373nrb7ar" path="res://painting.gdshader" id="3_kh476"]
+
+[sub_resource type="Shader" id="Shader_vqd24"]
+code = "shader_type canvas_item;
+
+uniform sampler2D mask;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	float a = texture(mask, UV).a;
+	COLOR.a = 1.0 - a;
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kh476"]
+shader = SubResource("Shader_vqd24")
+
+[sub_resource type="GDScript" id="GDScript_d1dx2"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	global_position = get_parent().get_parent().get_global_mouse_position()
+"
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_kh476"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3jie2"]
 resource_local_to_scene = true
-shader = ExtResource("3_kh476")
+shader = SubResource("Shader_vqd24")
 shader_parameter/mask = SubResource("ViewportTexture_kh476")
 
 [node name="Node2D" type="Node2D" unique_id=1561451094]
@@ -22,8 +58,9 @@ render_target_clear_mode = 1
 render_target_update_mode = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="SubViewport" unique_id=1673677691]
+material = SubResource("ShaderMaterial_kh476")
 texture = ExtResource("1_d1dx2")
-script = ExtResource("2_kh476")
+script = SubResource("GDScript_d1dx2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1037891706]
 anchor_mode = 0
