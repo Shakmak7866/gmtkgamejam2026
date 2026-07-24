@@ -54,4 +54,6 @@ zoom = Vector2(0.35, 0.35)
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Toothbrush" to="." method="_on_toothbrush_body_entered"]
+[connection signal="body_exited" from="Toothbrush" to="." method="_on_toothbrush_body_exited"]
 [connection signal="body_entered" from="Bath" to="." method="_on_bath_body_entered"]
+[connection signal="body_exited" from="Bath" to="." method="_on_bath_body_exited"]

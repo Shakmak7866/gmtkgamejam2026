@@ -21,6 +21,8 @@ func _process(delta: float) -> void:
 	else:
 		if percent_clean() > 0.9:
 			print("Teeth Cleaned")
+			await get_tree().create_timer(2.0).timeout
+			queue_free()
 
 func erase_circle(center: Vector2):
 	for x in range(center.x - BRUSH_RADIUS, center.x + BRUSH_RADIUS):
