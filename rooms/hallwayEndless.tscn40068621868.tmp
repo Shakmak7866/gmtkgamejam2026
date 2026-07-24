@@ -9,9 +9,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwvkv"]
 size = Vector2(490, 752)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wk544"]
-size = Vector2(74, 922)
-
 [node name="HallwayEndless" type="Node2D" unique_id=1616739569]
 script = ExtResource("1_wk544")
 
@@ -42,12 +39,4 @@ texture = ExtResource("3_xwvkv")
 position = Vector2(5, 0)
 shape = SubResource("RectangleShape2D_xwvkv")
 
-[node name="FinishLine" type="Area2D" parent="." unique_id=1484836335]
-position = Vector2(-5424, -116)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine" unique_id=864964517]
-position = Vector2(27, 451)
-shape = SubResource("RectangleShape2D_wk544")
-
 [connection signal="body_entered" from="Darkness" to="." method="_on_darkness_body_entered"]
-[connection signal="body_entered" from="FinishLine" to="." method="_on_finish_line_body_entered"]
