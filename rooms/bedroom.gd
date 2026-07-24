@@ -1,9 +1,13 @@
 extends Node2D
 
-@onready var checked_list : int
+@onready var transition = $Transition/AnimationPlayer
+
+var checked_list : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	transition.play("fade_out")
+	await transition.animation_finished
 	checked_list = 0
 
 

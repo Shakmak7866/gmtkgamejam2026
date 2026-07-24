@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var transition = $Transition/AnimationPlayer
+
 var desk_range : bool
 var desk_interact : bool
 var trash_cleaned : bool
@@ -7,6 +9,8 @@ var trash_cleaned : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	transition.play("fade_out")
+	await transition.animation_finished
 	for t in trash:
 		t.cleaned.connect(_on_trash_cleaned)
 
@@ -26,6 +30,8 @@ func _on_trash_cleaned(t : Trash):
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if desk_interact:
+		transition.play("fade_in")
+		await transition.animation_finished
 		get_tree().change_scene_to_file("res://rooms/hallwayNormal.tscn")
 
 

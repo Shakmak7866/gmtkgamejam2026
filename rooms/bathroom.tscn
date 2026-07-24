@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_px0fc"]
 [ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_en77f"]
 [ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="5_3xuc0"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="7_en77f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fup3h"]
 size = Vector2(88, 88)
@@ -15,6 +16,15 @@ size = Vector2(395.98016, 192.82794)
 
 [node name="Bathroom" type="Node2D" unique_id=331719233]
 script = ExtResource("1_px0fc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1403945203]
+offset_left = -1699.0
+offset_top = -969.0
+offset_right = 1712.0
+offset_bottom = 959.0
+mouse_filter = 2
+color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Bathroom" type="Sprite2D" parent="." unique_id=1985826265]
 position = Vector2(-3, 5)
@@ -51,6 +61,8 @@ texture = ExtResource("5_3xuc0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=227771916]
 zoom = Vector2(0.35, 0.35)
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_en77f")]
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Toothbrush" to="." method="_on_toothbrush_body_entered"]

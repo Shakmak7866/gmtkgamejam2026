@@ -5,12 +5,22 @@
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_rxrga"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_gbg02"]
 [ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_hefk4"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_rxrga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_home2"]
 size = Vector2(185, 123.5)
 
 [node name="Kitchen" type="Node2D" unique_id=2125318124]
 script = ExtResource("1_y7esr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=580129599]
+offset_left = -1653.0
+offset_top = -969.0
+offset_right = 1712.0
+offset_bottom = 959.0
+mouse_filter = 2
+color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Kitchen" type="Sprite2D" parent="." unique_id=1956523956]
 position = Vector2(0, -2)
@@ -36,6 +46,8 @@ texture = ExtResource("5_hefk4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=796111041]
 zoom = Vector2(0.35, 0.35)
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_rxrga")]
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Dishes" to="." method="_on_dishes_body_entered"]

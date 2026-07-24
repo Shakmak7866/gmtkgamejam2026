@@ -6,12 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_g8umw"]
 [ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_ckofh"]
 [ext_resource type="PackedScene" uid="uid://y4uoh4srrpqa" path="res://trash.tscn" id="6_ckofh"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="7_g8umw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73bni"]
 
 [node name="LivingRoom" type="Node2D" unique_id=824796416 node_paths=PackedStringArray("trash")]
 script = ExtResource("1_vsc2m")
 trash = [NodePath("Trash"), NodePath("Trash2"), NodePath("Trash3"), NodePath("Trash4"), NodePath("Trash5"), NodePath("Trash6"), NodePath("Trash7")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2069662428]
+offset_left = -2345.0
+offset_top = -1333.0
+offset_right = 2389.0
+offset_bottom = 1348.0
+mouse_filter = 2
+color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
 
 [node name="LivingRoom" type="Sprite2D" parent="." unique_id=1499970354]
 position = Vector2(1, -1)
@@ -58,6 +67,8 @@ position = Vector2(707, -300)
 
 [node name="Trash7" parent="." unique_id=1885420294 instance=ExtResource("6_ckofh")]
 position = Vector2(376, 152)
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_g8umw")]
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Desk" to="." method="_on_desk_body_entered"]

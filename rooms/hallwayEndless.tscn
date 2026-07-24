@@ -15,6 +15,14 @@ size = Vector2(74, 922)
 [node name="HallwayEndless" type="Node2D" unique_id=1616739569]
 script = ExtResource("1_wk544")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2147207846]
+offset_left = -7002.0
+offset_top = -510.0
+offset_right = 1922.0
+offset_bottom = 1064.0
+mouse_filter = 2
+color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+
 [node name="HallwayEndless" type="Sprite2D" parent="." unique_id=1773994247]
 position = Vector2(-2580.0005, 314)
 scale = Vector2(9.427501, 0.815)

@@ -1,14 +1,15 @@
 extends Node2D
 
 @onready var player : CharacterBody2D = $CharacterBody2D
+@onready var transition = $Transition/AnimationPlayer
 
 var dinner_range : bool
 var dinner_eaten : bool
 var eating : bool
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	transition.play("fade_out")
+	await transition.animation_finished
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,6 +26,8 @@ func _process(delta: float) -> void:
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if dinner_eaten:
+		transition.play("fade_in")
+		await transition.animation_finished
 		get_tree().change_scene_to_file("res://rooms/kitchen.tscn")
 
 func _on_dinner_body_entered(body: Node2D) -> void:

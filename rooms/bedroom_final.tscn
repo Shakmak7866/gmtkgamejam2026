@@ -7,6 +7,15 @@
 
 [node name="BedroomFinal" type="Node2D" unique_id=191138988]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1896729387]
+offset_left = -1725.0
+offset_top = -976.0
+offset_right = 1712.0
+offset_bottom = 959.0
+mouse_filter = 2
+color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+metadata/_edit_use_anchors_ = true
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1761753943]
 zoom = Vector2(0.35, 0.35)
 

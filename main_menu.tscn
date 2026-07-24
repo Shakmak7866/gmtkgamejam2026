@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://d4b6vll557dsr"]
+
+[ext_resource type="Script" uid="uid://bul8b2dn5qorf" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://bb3qfpc6tkras" path="res://mainmenu_temp.png" id="2_fu7sn"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="2_jix8l"]
+
+[node name="MainMenu" type="Control" unique_id=2121918821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("2_jix8l")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1933551765]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fu7sn")
+
+[node name="Start" type="Button" parent="." unique_id=2092514957]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15100001
+anchor_top = 0.48800004
+anchor_right = 0.30200002
+anchor_bottom = 0.62700003
+offset_left = 0.04798889
+offset_top = -0.22402954
+offset_right = 0.09597778
+offset_bottom = -0.2960205
+grow_vertical = 2
+text = "Start"
+
+[node name="Quit" type="Button" parent="." unique_id=844696238]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62700003
+anchor_top = 0.485
+anchor_right = 0.78300005
+anchor_bottom = 0.62200004
+offset_left = -0.3040161
+offset_top = -0.27999878
+offset_right = -0.016052246
+offset_bottom = -0.056030273
+text = "Quit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

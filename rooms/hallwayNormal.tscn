@@ -5,9 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_8aicu"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_xlpue"]
 [ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="5_6g852"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_xlpue"]
 
 [node name="HallwayNormal" type="Node2D" unique_id=1964350650]
 script = ExtResource("1_l2fov")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1246838620]
+offset_left = -1214.0
+offset_top = -885.0
+offset_right = 2151.0
+offset_bottom = 1043.0
+mouse_filter = 2
+color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
 
 [node name="HallwayNormal" type="Sprite2D" parent="." unique_id=968495403]
 position = Vector2(486, 61.5)
@@ -39,6 +48,8 @@ texture = ExtResource("5_6g852")
 position = Vector2(473, 128)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=166205543]
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_xlpue")]
 
 [connection signal="body_entered" from="BathroomDoor" to="." method="_on_bathroom_door_body_entered"]
 [connection signal="body_entered" from="BedroomDoor" to="." method="_on_bedroom_door_body_entered"]
