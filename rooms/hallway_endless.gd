@@ -25,5 +25,5 @@ func _on_darkness_body_entered(body: Node2D) -> void:
 func _on_finish_line_body_entered(body: Node2D) -> void:
 	SPEED = 0
 	print("You Survived")
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://rooms/bedroom.tscn")
+	await get_tree().create_timer(.5).timeout
+	get_tree().change_scene_to_file("res://rooms/bedroom_final.tscn")

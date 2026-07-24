@@ -14,18 +14,18 @@ position = Vector2(1, -2)
 scale = Vector2(2, 2)
 texture = ExtResource("1_ahsja")
 
-[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_cns8q")]
-position = Vector2(-523, 603)
-
-[node name="Dunk" type="Sprite2D" parent="." unique_id=1548045899]
-position = Vector2(344, -321)
-scale = Vector2(0.23, 0.23)
+[node name="Dunk" type="Sprite2D" parent="Bedroom" unique_id=1548045899]
+position = Vector2(171.5, -159.5)
+scale = Vector2(0.115, 0.115)
 texture = ExtResource("4_csdsa")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=449907108]
-position = Vector2(740, 150.5)
-scale = Vector2(1, 2.3203125)
+[node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=449907108]
+position = Vector2(369.5, 76.25)
+scale = Vector2(0.5, 1.1601563)
 texture = ExtResource("5_g1xlt")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_cns8q")]
+position = Vector2(-523, 603)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=583784268]
 zoom = Vector2(0.35, 0.35)

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://56gxvv4apgvf"]
+
+[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_ynayg"]
+[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="2_xxdcv"]
+[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="3_xndt8"]
+[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="4_uhj58"]
+
+[node name="BedroomFinal" type="Node2D" unique_id=191138988]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1761753943]
+zoom = Vector2(0.35, 0.35)
+
+[node name="Bedroom" type="Sprite2D" parent="." unique_id=45000440]
+position = Vector2(1, -2)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ynayg")
+
+[node name="Dunk" type="Sprite2D" parent="Bedroom" unique_id=2051167499]
+position = Vector2(171.5, -159.5)
+scale = Vector2(0.115, 0.115)
+texture = ExtResource("2_xxdcv")
+
+[node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=1337109902]
+position = Vector2(369.5, 76.25)
+scale = Vector2(0.5, 1.1601563)
+texture = ExtResource("3_xndt8")
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("4_uhj58")]
+position = Vector2(355, -324)
