@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var player : CharacterBody2D = $CharacterBody2D
+
 var dishes_washed : bool
 var cleaning : bool
 var cleaning_range : bool
@@ -12,7 +14,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if cleaning:
-		return
+		player.set_physics_process(false)
+	else:
+		player.set_physics_process(true)
 
 	if Input.is_action_just_pressed("interact") and cleaning_range:
 		cleaning = true

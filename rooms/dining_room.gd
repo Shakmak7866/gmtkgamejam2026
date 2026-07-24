@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var player : CharacterBody2D = $CharacterBody2D
+
 var dinner_range : bool
 var dinner_eaten : bool
 var eating : bool
@@ -12,7 +14,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if eating:
-		return
+		player.set_physics_process(false)
+	else:
+		player.set_physics_process(true)
 
 	if Input.is_action_just_pressed("interact") and dinner_range:
 		eating = true

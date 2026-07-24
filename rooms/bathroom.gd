@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var player : CharacterBody2D = $CharacterBody2D
+
 var brushed_teeth : bool
 var bath_scene : bool
 var brush_range : bool
@@ -14,7 +16,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if brushing:
-		return
+		player.set_physics_process(false)
+	else:
+		player.set_physics_process(true)
 
 	if Input.is_action_just_pressed("interact") and brush_range:
 		brushing = true
