@@ -71,8 +71,6 @@ position = Vector2(707, -300)
 [node name="Trash7" parent="." unique_id=1885420294 instance=ExtResource("6_ckofh")]
 position = Vector2(376, 152)
 
-[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_g8umw")]
-
 [node name="Door2" parent="." unique_id=495188089 instance=ExtResource("4_g8umw")]
 position = Vector2(-1221, 805)
 rotation = -1.5707964
@@ -95,6 +93,8 @@ position = Vector2(750, 906)
 
 [node name="Trash13" parent="." unique_id=902665801 instance=ExtResource("9_u2cia")]
 position = Vector2(88, 320)
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_g8umw")]
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Desk" to="." method="_on_desk_body_entered"]

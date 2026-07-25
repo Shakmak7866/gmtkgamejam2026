@@ -13,10 +13,11 @@ var on_food : bool
 var scrubbed : bool
 var mouse_clicked : bool
 var has_dish : bool
+var sponge_pos
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	sponge_pos = $Control/Panel/Sponge.global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,15 +31,25 @@ func _process(delta: float) -> void:
 		cleaned += 1
 		scrubs = 0
 		has_dish = false
+		$AnimationPlayer.play("RESET")
+	
+	if cleaned < 3 and has_dish:
+		$Control/Panel/Sponge.global_position = get_viewport().get_mouse_position()
+	else:
+		$Control/Panel/Sponge.global_position = sponge_pos
 	
 	if cleaned == 3 and has_dish:
 		# Play hand grabbing animation
+		$AnimationPlayer.play("grab_hand")
+		await $AnimationPlayer.animation_finished
 		end_minigame()
 
 func _input(event : InputEvent) -> void:
 	if event is InputEventMouseButton and on_food and event.is_pressed():
 		if not has_dish:
 			has_dish = true
+			$AnimationPlayer.play("grab_dish")
+			await $AnimationPlayer.animation_finished
 			#mini_game_play()
 
 
@@ -67,8 +78,6 @@ func mini_game_play():
 		end_minigame()
 
 func end_minigame():
-	# Play animation
-	await get_tree().create_timer(2.0).timeout
 	queue_free()
 
 
