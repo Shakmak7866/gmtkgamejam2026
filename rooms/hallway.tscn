@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://yk2pe73jftv5"]
 
 [ext_resource type="Script" uid="uid://cnrnb2684ooma" path="res://rooms/hallway.gd" id="1_hwu5l"]
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_y0ln7"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_pf4c8"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="2_u7cuw"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="3_u7cuw"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_bynws"]
 
 [node name="Hallway" type="Node2D" unique_id=1585987424]
@@ -17,21 +17,25 @@ offset_top = -969.0
 offset_right = 1712.0
 offset_bottom = 959.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Hallway" type="Sprite2D" parent="." unique_id=789371761]
 position = Vector2(2.0000038, 7)
-scale = Vector2(1.6225, 2.08)
-texture = ExtResource("1_y0ln7")
+scale = Vector2(2, 2)
+texture = ExtResource("3_u7cuw")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_pf4c8")]
-position = Vector2(6, 646)
+position = Vector2(6, 470)
 
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_bynws")]
-position = Vector2(-648, -406)
+position = Vector2(-647, -440)
+rotation = -1.5707964
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=107203951]
 zoom = Vector2(0.35, 0.35)
+
+[node name="Door2" parent="." unique_id=738331918 instance=ExtResource("4_bynws")]
+position = Vector2(-2, 729)
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://y4uoh4srrpqa"]
 
 [ext_resource type="Script" uid="uid://by52qr51emm4b" path="res://trash.gd" id="1_43he1"]
-[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="2_76yqg"]
+[ext_resource type="Texture2D" uid="uid://bj68m1nmpku07" path="res://assests/trash1.png" id="2_43he1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e4evd"]
 radius = 81.154175
@@ -13,7 +13,8 @@ script = ExtResource("1_43he1")
 shape = SubResource("CircleShape2D_e4evd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=852317940]
-texture = ExtResource("2_76yqg")
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_43he1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

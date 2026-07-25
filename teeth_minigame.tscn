@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bxrixpm3p2ad1"]
 
 [ext_resource type="Script" uid="uid://cdqjtaxqcphxf" path="res://teeth_minigame.gd" id="1_gedxa"]
-[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="2_gedxa"]
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="3_gedxa"]
+[ext_resource type="Texture2D" uid="uid://uqrce3i2uq4s" path="res://assests/cleanteeth.png" id="2_gedxa"]
+[ext_resource type="Texture2D" uid="uid://dri5j5egelpsd" path="res://assests/dirtyteeth.png" id="3_tgyau"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=243442422]
 script = ExtResource("1_gedxa")
@@ -26,10 +26,8 @@ grow_vertical = 2
 
 [node name="CleanTeeth" type="Sprite2D" parent="." unique_id=1842920560]
 position = Vector2(578, 321)
-scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_gedxa")
 
 [node name="DirtyTeeth" type="Sprite2D" parent="." unique_id=1064220562]
-position = Vector2(579.50006, 321.50003)
-scale = Vector2(0.49125, 0.75875)
-texture = ExtResource("3_gedxa")
+position = Vector2(578, 387)
+texture = ExtResource("3_tgyau")

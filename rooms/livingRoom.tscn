@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bc0ny25ebxvn0"]
 
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_67bru"]
 [ext_resource type="Script" uid="uid://c2t38q4ktden7" path="res://rooms/living_room.gd" id="1_vsc2m"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_g8umw"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_ewctb"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_g8umw"]
 [ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_ckofh"]
 [ext_resource type="PackedScene" uid="uid://y4uoh4srrpqa" path="res://trash.tscn" id="6_ckofh"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="7_g8umw"]
+[ext_resource type="PackedScene" uid="uid://8re3pcs6mb7y" path="res://trash2.tscn" id="8_73bni"]
+[ext_resource type="PackedScene" uid="uid://bcumu61fwia8t" path="res://trash3.tscn" id="9_u2cia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73bni"]
 
@@ -20,21 +22,22 @@ offset_top = -1333.0
 offset_right = 2389.0
 offset_bottom = 1348.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="LivingRoom" type="Sprite2D" parent="." unique_id=1499970354]
-position = Vector2(1, -1)
-scale = Vector2(3, 3)
-texture = ExtResource("1_67bru")
+position = Vector2(1, 120)
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("2_g8umw")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_ewctb")]
-position = Vector2(-1084, 907)
+position = Vector2(-684, 811)
 
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_g8umw")]
-position = Vector2(-14, -747)
+position = Vector2(11, -1207)
+scale = Vector2(2, 2)
 
 [node name="Desk" type="Area2D" parent="." unique_id=973052697]
-position = Vector2(-870, -737)
+position = Vector2(-713, -772)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desk" unique_id=1410496903]
 scale = Vector2(7.5, 7.5)
@@ -48,7 +51,7 @@ texture = ExtResource("5_ckofh")
 zoom = Vector2(0.25, 0.25)
 
 [node name="Trash" parent="." unique_id=1756980037 instance=ExtResource("6_ckofh")]
-position = Vector2(-843, 266)
+position = Vector2(-792, 276)
 
 [node name="Trash2" parent="." unique_id=2638265 instance=ExtResource("6_ckofh")]
 position = Vector2(342, 870)
@@ -69,6 +72,29 @@ position = Vector2(707, -300)
 position = Vector2(376, 152)
 
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_g8umw")]
+
+[node name="Door2" parent="." unique_id=495188089 instance=ExtResource("4_g8umw")]
+position = Vector2(-1221, 805)
+rotation = -1.5707964
+scale = Vector2(2, 2)
+
+[node name="Trash8" parent="." unique_id=2077319738 instance=ExtResource("8_73bni")]
+position = Vector2(-362, 148)
+
+[node name="Trash9" parent="." unique_id=1926485730 instance=ExtResource("9_u2cia")]
+position = Vector2(305, 572)
+
+[node name="Trash10" parent="." unique_id=470526248 instance=ExtResource("8_73bni")]
+position = Vector2(-306, 957)
+
+[node name="Trash11" parent="." unique_id=714802173 instance=ExtResource("9_u2cia")]
+position = Vector2(361, -418)
+
+[node name="Trash12" parent="." unique_id=38754604 instance=ExtResource("8_73bni")]
+position = Vector2(750, 906)
+
+[node name="Trash13" parent="." unique_id=902665801 instance=ExtResource("9_u2cia")]
+position = Vector2(88, 320)
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Desk" to="." method="_on_desk_body_entered"]

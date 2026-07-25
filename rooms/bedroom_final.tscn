@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://56gxvv4apgvf"]
 
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_ynayg"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="1_ynayg"]
 [ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="2_xxdcv"]
 [ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="3_xndt8"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="4_uhj58"]
@@ -13,7 +13,7 @@ offset_top = -976.0
 offset_right = 1712.0
 offset_bottom = 959.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1761753943]
@@ -30,7 +30,7 @@ scale = Vector2(0.115, 0.115)
 texture = ExtResource("2_xxdcv")
 
 [node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=1337109902]
-position = Vector2(369.5, 76.25)
+position = Vector2(305.5, 74.5)
 scale = Vector2(0.5, 1.1601563)
 texture = ExtResource("3_xndt8")
 

@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://0qklpi8xme0e"]
 
 [ext_resource type="Script" uid="uid://0lr0sbe622gp" path="res://rooms/bedroom.gd" id="1_78uxc"]
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_ahsja"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_cns8q"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_cns8q"]
 [ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="4_csdsa"]
 [ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="5_g1xlt"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_cns8q"]
+[ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="7_csdsa"]
 
 [node name="Bedroom" type="Node2D" unique_id=112134652]
 script = ExtResource("1_78uxc")
@@ -16,13 +17,13 @@ offset_top = -969.0
 offset_right = 1712.0
 offset_bottom = 959.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Bedroom" type="Sprite2D" parent="." unique_id=1670209348]
 position = Vector2(1, -2)
 scale = Vector2(2, 2)
-texture = ExtResource("1_ahsja")
+texture = ExtResource("2_cns8q")
 
 [node name="Dunk" type="Sprite2D" parent="Bedroom" unique_id=1548045899]
 position = Vector2(171.5, -159.5)
@@ -30,14 +31,18 @@ scale = Vector2(0.115, 0.115)
 texture = ExtResource("4_csdsa")
 
 [node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=449907108]
-position = Vector2(369.5, 76.25)
+position = Vector2(303, 97)
 scale = Vector2(0.5, 1.1601563)
 texture = ExtResource("5_g1xlt")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_cns8q")]
-position = Vector2(-523, 603)
+position = Vector2(-402, 368)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=583784268]
 zoom = Vector2(0.35, 0.35)
 
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_cns8q")]
+
+[node name="Door" parent="." unique_id=626891781 instance=ExtResource("7_csdsa")]
+position = Vector2(-407, 701)
+rotation = 3.1415927

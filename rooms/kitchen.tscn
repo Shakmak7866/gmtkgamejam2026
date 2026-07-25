@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dj81l0hotm14i"]
 
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_el7b0"]
 [ext_resource type="Script" uid="uid://g0k5v5bijjg2" path="res://rooms/kitchen.gd" id="1_y7esr"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_rxrga"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_rxrga"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_gbg02"]
 [ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_hefk4"]
@@ -19,19 +19,20 @@ offset_top = -969.0
 offset_right = 1712.0
 offset_bottom = 959.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Kitchen" type="Sprite2D" parent="." unique_id=1956523956]
 position = Vector2(0, -2)
 scale = Vector2(2, 2)
-texture = ExtResource("1_el7b0")
+texture = ExtResource("2_rxrga")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_rxrga")]
-position = Vector2(-2, 687)
+position = Vector2(5, 379)
 
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_gbg02")]
-position = Vector2(787, -213)
+position = Vector2(680, -388)
+rotation = 1.5707964
 
 [node name="Dishes" type="Area2D" parent="." unique_id=255442803]
 
@@ -48,6 +49,10 @@ texture = ExtResource("5_hefk4")
 zoom = Vector2(0.35, 0.35)
 
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_rxrga")]
+
+[node name="Door2" parent="." unique_id=147616451 instance=ExtResource("4_gbg02")]
+position = Vector2(10, 701)
+rotation = 3.1415927
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Dishes" to="." method="_on_dishes_body_entered"]

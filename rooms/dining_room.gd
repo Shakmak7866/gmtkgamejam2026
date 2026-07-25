@@ -46,4 +46,6 @@ func start_minigame():
 func _on_minigame_finished():
 	eating = false
 	dinner_eaten = true
+	$Cleandish.queue_free()
+	$Dinner.queue_free()
 	print("Im Full")

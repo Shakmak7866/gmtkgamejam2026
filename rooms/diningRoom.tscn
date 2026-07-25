@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://bjp4uty3yb33i"]
 
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_fbfqf"]
 [ext_resource type="Script" uid="uid://ctxkddbvma05n" path="res://rooms/dining_room.gd" id="1_x2tpo"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_nok4x"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_nok4x"]
-[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_rf3at"]
+[ext_resource type="Texture2D" uid="uid://hg5pv2dpr5uj" path="res://assests/dinnertable.png" id="3_rf3at"]
+[ext_resource type="Texture2D" uid="uid://b002r3de7r326" path="res://assests/pizza1.png" id="5_65ouq"]
+[ext_resource type="Texture2D" uid="uid://bx1if8cp3qcu1" path="res://assests/cleandish.png" id="5_dypkc"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="5_pq6ch"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_nok4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dypkc"]
+size = Vector2(321, 743)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65ouq"]
 size = Vector2(83.5, 84.5)
@@ -14,40 +19,61 @@ size = Vector2(83.5, 84.5)
 script = ExtResource("1_x2tpo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1415154625]
-offset_left = -1653.0
-offset_top = -969.0
-offset_right = 1712.0
-offset_bottom = 959.0
+offset_left = -2133.0
+offset_top = -1333.0
+offset_right = 2116.0
+offset_bottom = 1354.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="DiningRoom" type="Sprite2D" parent="." unique_id=1921158363]
-position = Vector2(91.87496, -80.62503)
-scale = Vector2(2, 2)
-texture = ExtResource("1_fbfqf")
+position = Vector2(-2, -3)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_nok4x")
+
+[node name="DiningTable" type="StaticBody2D" parent="." unique_id=453719515]
+
+[node name="Dinigtable" type="Sprite2D" parent="DiningTable" unique_id=1782078744]
+position = Vector2(21, 96)
+texture = ExtResource("3_rf3at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiningTable" unique_id=1150971701]
+position = Vector2(5.5, 219.5)
+shape = SubResource("RectangleShape2D_dypkc")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_nok4x")]
-position = Vector2(777, 331)
+position = Vector2(523, 373)
+
+[node name="Cleandish" type="Sprite2D" parent="." unique_id=1097333728]
+position = Vector2(4, -73)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("5_dypkc")
 
 [node name="Dinner" type="Area2D" parent="." unique_id=1934380990]
-position = Vector2(67, -248)
+position = Vector2(4, -261)
 scale = Vector2(2, 2)
 
 [node name="Bear" type="Sprite2D" parent="Dinner" unique_id=1127191044]
-texture = ExtResource("4_rf3at")
+position = Vector2(0, 94)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("5_65ouq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner" unique_id=588759396]
-position = Vector2(-0.75, -0.75)
+position = Vector2(-0.5, -3)
 shape = SubResource("RectangleShape2D_65ouq")
 
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("5_pq6ch")]
-position = Vector2(33, -664)
+position = Vector2(-21, -847)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1016144619]
-zoom = Vector2(0.35, 0.35)
+zoom = Vector2(0.3, 0.3)
 
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_nok4x")]
+
+[node name="Door2" parent="." unique_id=101576347 instance=ExtResource("5_pq6ch")]
+position = Vector2(829, 384)
+rotation = 1.5707964
 
 [connection signal="body_entered" from="Dinner" to="." method="_on_dinner_body_entered"]
 [connection signal="body_exited" from="Dinner" to="." method="_on_dinner_body_exited"]

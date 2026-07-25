@@ -33,14 +33,15 @@ func _on_area_2d_mouse_exited() -> void:
 	print("off_food")
 	
 func mini_game_play():
-	if click_count < food_textures.size():
+	if click_count < food_textures.size()-1:
 		textRect.texture = food_textures[click_count]
 		print("Good pizza")
 	else:
+		textRect.texture = food_textures[3]
 		print("Finished")
 		end_minigame()
 
 func end_minigame():
 	# Play animation
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	queue_free()

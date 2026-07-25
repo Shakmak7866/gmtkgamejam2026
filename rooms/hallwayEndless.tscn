@@ -1,13 +1,53 @@
 [gd_scene format=3 uid="uid://b8vsctr4irdm"]
 
-[ext_resource type="Texture2D" uid="uid://c2svurbc0y4o1" path="res://rooms/living_room.png" id="1_1ycpb"]
 [ext_resource type="Script" uid="uid://cu0eh5uoy3df0" path="res://rooms/hallway_endless.gd" id="1_wk544"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_mu402"]
-[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="3_xwvkv"]
-[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_xwvkv"]
+[ext_resource type="Texture2D" uid="uid://7qmiwnyfxil0" path="res://assests/bloodbath.png" id="3_nqpe1"]
+[ext_resource type="Texture2D" uid="uid://wxkeuakgv6il" path="res://assests/HallLeft.png" id="5_tnbg5"]
+[ext_resource type="Texture2D" uid="uid://dn5xcca5npxph" path="res://assests/HallRight.png" id="6_p0lvt"]
+[ext_resource type="Texture2D" uid="uid://dnp4sedewtycp" path="res://assests/dark_sprite.png" id="7_nqpe1"]
+[ext_resource type="Texture2D" uid="uid://blpgpdkevk43o" path="res://assests/HallCenter.png" id="7_tslbp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwvkv"]
-size = Vector2(490, 752)
+size = Vector2(572, 1184)
+
+[sub_resource type="Animation" id="Animation_tnbg5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dunk:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_p0lvt"]
+resource_name = "moving"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dunk:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.1947),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tslbp"]
+_data = {
+&"RESET": SubResource("Animation_tnbg5"),
+&"moving": SubResource("Animation_p0lvt")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk544"]
 size = Vector2(74, 922)
@@ -16,42 +56,93 @@ size = Vector2(74, 922)
 script = ExtResource("1_wk544")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2147207846]
-offset_left = -7002.0
-offset_top = -510.0
-offset_right = 1922.0
-offset_bottom = 1064.0
+offset_left = -4451.0
+offset_top = -793.0
+offset_right = 4473.0
+offset_bottom = 781.0
 mouse_filter = 2
-color = Color(0.0021745865, 0.05770587, 0.07823596, 1)
+color = Color(0, 0, 0, 1)
 
-[node name="HallwayEndless" type="Sprite2D" parent="." unique_id=1773994247]
-position = Vector2(-2580.0005, 314)
-scale = Vector2(9.427501, 0.815)
-texture = ExtResource("1_1ycpb")
+[node name="HallLeft" type="Sprite2D" parent="." unique_id=738373834]
+position = Vector2(-3319, 0)
+texture = ExtResource("5_tnbg5")
+
+[node name="HallRight" type="Sprite2D" parent="." unique_id=964991952]
+position = Vector2(2068, 0)
+texture = ExtResource("6_p0lvt")
+
+[node name="HallCenter" type="Sprite2D" parent="." unique_id=1054909608]
+position = Vector2(1818, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter2" type="Sprite2D" parent="." unique_id=2050723225]
+position = Vector2(1310, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter3" type="Sprite2D" parent="." unique_id=1953487449]
+position = Vector2(826.375, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter4" type="Sprite2D" parent="." unique_id=1886208633]
+position = Vector2(359.21, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter5" type="Sprite2D" parent="." unique_id=742080481]
+position = Vector2(-101.45999, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter6" type="Sprite2D" parent="." unique_id=1133284857]
+position = Vector2(-1444, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter7" type="Sprite2D" parent="." unique_id=1858689523]
+position = Vector2(-2382, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter8" type="Sprite2D" parent="." unique_id=737369901]
+position = Vector2(-2844, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter9" type="Sprite2D" parent="." unique_id=119123517]
+position = Vector2(-974, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter10" type="Sprite2D" parent="." unique_id=1899264188]
+position = Vector2(-519, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="HallCenter11" type="Sprite2D" parent="." unique_id=1406881423]
+position = Vector2(-1919, 0)
+texture = ExtResource("7_tslbp")
+
+[node name="bathtub" type="Sprite2D" parent="." unique_id=1497546731]
+position = Vector2(-3376.0005, 17.000023)
+rotation = -1.5707964
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("3_nqpe1")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_mu402")]
-position = Vector2(603, 311)
+position = Vector2(1865, -8)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=588981827]
 
-[node name="Bear" type="Sprite2D" parent="." unique_id=1497546731]
-position = Vector2(-6135.25, 368)
-scale = Vector2(1.4882352, 1.6046512)
-texture = ExtResource("4_xwvkv")
-
 [node name="Darkness" type="Area2D" parent="." unique_id=1249081305]
-position = Vector2(1353, 327)
+position = Vector2(2530, 26)
 
 [node name="Dunk" type="Sprite2D" parent="Darkness" unique_id=586236915]
-position = Vector2(3.000122, 4.0000305)
-scale = Vector2(0.495, 0.495)
-texture = ExtResource("3_xwvkv")
+position = Vector2(48.00006, -10)
+texture = ExtResource("7_nqpe1")
+hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Darkness" unique_id=165433266]
-position = Vector2(5, 0)
+position = Vector2(269, -16)
 shape = SubResource("RectangleShape2D_xwvkv")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Darkness" unique_id=978845617]
+libraries/ = SubResource("AnimationLibrary_tslbp")
+
 [node name="FinishLine" type="Area2D" parent="." unique_id=1484836335]
-position = Vector2(-5424, -116)
+position = Vector2(-2662, -436)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine" unique_id=864964517]
 position = Vector2(27, 451)

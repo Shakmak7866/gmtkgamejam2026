@@ -13,6 +13,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	darkness.position.x -= SPEED * delta
+	$Darkness/AnimationPlayer.play("moving")
 
 
 func _on_darkness_body_entered(body: Node2D) -> void:

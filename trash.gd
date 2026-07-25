@@ -1,17 +1,13 @@
 class_name Trash
 extends Area2D
 
-@export var trash_texture : Texture2D
-
-@onready var sprite : Sprite2D = $Sprite2D
-
 var trash_range : bool
 
 signal cleaned(trash)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.texture = trash_texture
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
