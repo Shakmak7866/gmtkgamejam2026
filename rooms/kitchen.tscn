@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_rxrga"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_rxrga"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_gbg02"]
-[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="5_hefk4"]
+[ext_resource type="Texture2D" uid="uid://dg8lvaqwy88m0" path="res://assests/sink.png" id="5_rxrga"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_rxrga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_home2"]
@@ -27,23 +27,22 @@ position = Vector2(0, -2)
 scale = Vector2(2, 2)
 texture = ExtResource("2_rxrga")
 
-[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_rxrga")]
-position = Vector2(5, 379)
-
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_gbg02")]
 position = Vector2(680, -388)
 rotation = 1.5707964
 
 [node name="Dishes" type="Area2D" parent="." unique_id=255442803]
+position = Vector2(4, -45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dishes" unique_id=611041949]
 position = Vector2(1.5, -487.75)
+scale = Vector2(1.765, 1.765)
 shape = SubResource("RectangleShape2D_home2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Dishes" unique_id=1196851508]
 position = Vector2(3, -486.00003)
-scale = Vector2(1.285, 1.285)
-texture = ExtResource("5_hefk4")
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("5_rxrga")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=796111041]
 zoom = Vector2(0.35, 0.35)
@@ -53,6 +52,9 @@ zoom = Vector2(0.35, 0.35)
 [node name="Door2" parent="." unique_id=147616451 instance=ExtResource("4_gbg02")]
 position = Vector2(10, 701)
 rotation = 3.1415927
+
+[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_rxrga")]
+position = Vector2(-3, 356)
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Dishes" to="." method="_on_dishes_body_entered"]

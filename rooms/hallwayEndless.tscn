@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cu0eh5uoy3df0" path="res://rooms/hallway_endless.gd" id="1_wk544"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_mu402"]
-[ext_resource type="Texture2D" uid="uid://7qmiwnyfxil0" path="res://assests/bloodbath.png" id="3_nqpe1"]
+[ext_resource type="Texture2D" uid="uid://q2jn8qnael5s" path="res://assests/bloodbath2.png" id="5_nqpe1"]
 [ext_resource type="Texture2D" uid="uid://wxkeuakgv6il" path="res://assests/HallLeft.png" id="5_tnbg5"]
 [ext_resource type="Texture2D" uid="uid://dn5xcca5npxph" path="res://assests/HallRight.png" id="6_p0lvt"]
 [ext_resource type="Texture2D" uid="uid://dnp4sedewtycp" path="res://assests/dark_sprite.png" id="7_nqpe1"]
@@ -119,7 +119,7 @@ texture = ExtResource("7_tslbp")
 position = Vector2(-3376.0005, 17.000023)
 rotation = -1.5707964
 scale = Vector2(0.33, 0.33)
-texture = ExtResource("3_nqpe1")
+texture = ExtResource("5_nqpe1")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_mu402")]
 position = Vector2(1865, -8)

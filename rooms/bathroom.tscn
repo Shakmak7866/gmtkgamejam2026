@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://clqivv0lom8o5" path="res://bathroom.png" id="2_en77f"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="2_wq0g2"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_px0fc"]
-[ext_resource type="Texture2D" uid="uid://36srstnc876o" path="res://bear.jpg" id="4_en77f"]
-[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="5_3xuc0"]
+[ext_resource type="Texture2D" uid="uid://dg8lvaqwy88m0" path="res://assests/sink.png" id="5_en77f"]
+[ext_resource type="Texture2D" uid="uid://dmr8cndvp3bwf" path="res://assests/bathsprite.png" id="6_3xuc0"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="7_en77f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fup3h"]
-size = Vector2(88, 88)
+size = Vector2(98.31712, 72.25746)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpfer"]
 size = Vector2(395.98016, 192.82794)
@@ -35,16 +35,20 @@ texture = ExtResource("2_en77f")
 position = Vector2(-5, 884)
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_px0fc")]
-position = Vector2(-4, 628)
+position = Vector2(-8, 556)
 
 [node name="Toothbrush" type="Area2D" parent="." unique_id=1928130820]
 position = Vector2(-15, -630)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Toothbrush" unique_id=955277692]
+position = Vector2(16.430012, -25.070007)
+scale = Vector2(3.185, 3.185)
 shape = SubResource("RectangleShape2D_fup3h")
 
 [node name="Sprite2D" type="Sprite2D" parent="Toothbrush" unique_id=1201806369]
-texture = ExtResource("4_en77f")
+position = Vector2(14.999999, -71.99999)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("5_en77f")
 
 [node name="Bath" type="Area2D" parent="." unique_id=1493869331]
 position = Vector2(477.99994, -580)
@@ -56,8 +60,10 @@ scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_jpfer")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bath" unique_id=2105808010]
-scale = Vector2(0.12, 0.12)
-texture = ExtResource("5_3xuc0")
+position = Vector2(-8.128625, -79.98702)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("6_3xuc0")
+hframes = 3
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=227771916]
 zoom = Vector2(0.35, 0.35)

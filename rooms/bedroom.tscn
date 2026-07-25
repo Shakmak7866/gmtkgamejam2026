@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://0lr0sbe622gp" path="res://rooms/bedroom.gd" id="1_78uxc"]
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_cns8q"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_cns8q"]
-[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="4_csdsa"]
-[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="5_g1xlt"]
+[ext_resource type="Texture2D" uid="uid://cae2ua0xxdmcy" path="res://assests/bed.png" id="3_csdsa"]
+[ext_resource type="Texture2D" uid="uid://c3i5yl5v5tof5" path="res://assests/closet.png" id="4_g1xlt"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_cns8q"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="7_csdsa"]
 
@@ -25,15 +25,15 @@ position = Vector2(1, -2)
 scale = Vector2(2, 2)
 texture = ExtResource("2_cns8q")
 
-[node name="Dunk" type="Sprite2D" parent="Bedroom" unique_id=1548045899]
-position = Vector2(171.5, -159.5)
-scale = Vector2(0.115, 0.115)
-texture = ExtResource("4_csdsa")
+[node name="Bed" type="Sprite2D" parent="Bedroom" unique_id=1548045899]
+position = Vector2(155.765, -159.5)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("3_csdsa")
 
-[node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=449907108]
-position = Vector2(303, 97)
-scale = Vector2(0.5, 1.1601563)
-texture = ExtResource("5_g1xlt")
+[node name="Closet" type="Sprite2D" parent="Bedroom" unique_id=449907108]
+position = Vector2(286.78, 147.39)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_g1xlt")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_cns8q")]
 position = Vector2(-402, 368)
