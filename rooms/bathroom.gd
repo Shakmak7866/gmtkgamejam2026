@@ -8,6 +8,8 @@ var bath_scene : bool
 var brush_range : bool
 var brushing : bool
 var bath_range : bool
+var check : bool
+var scared : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,6 +19,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Label.text = Global.text
 	if brushing:
 		player.set_physics_process(false)
 	else:
@@ -26,9 +29,14 @@ func _process(delta: float) -> void:
 		brushing = true
 		start_minigame()
 	
-	if Input.is_action_just_pressed("interact") and brushed_teeth and bath_range:
+	if brushed_teeth and check:
+		$AnimationPlayer.play("blood")
+		scared = true
+	
+	if Input.is_action_just_pressed("interact") and scared and bath_range:
 		bath_scene = true
-		# TODO animate bath scene
+		var bath = preload("res://cutscene_bathtub.tscn").instantiate()
+		get_tree().current_scene.add_child(bath)
 
 func start_minigame():
 	var teeth_minigame = preload("res://teeth_minigame.tscn").instantiate()
@@ -43,6 +51,7 @@ func _on_minigame_finished():
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if bath_scene:
+		Global.chores_done = true
 		transition.play("fade_in")
 		await transition.animation_finished
 		get_tree().change_scene_to_file("res://rooms/hallwayNormal.tscn")
@@ -58,3 +67,11 @@ func _on_bath_body_entered(body: Node2D) -> void:
 
 func _on_bath_body_exited(body: Node2D) -> void:
 	bath_range = false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	check = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	check = false

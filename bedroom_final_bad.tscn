@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c5w6en35ep4n3"]
+
+[ext_resource type="Script" uid="uid://wtblar21dyvk" path="res://bedroom_final_bad.gd" id="1_l1r5l"]
+[ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_hwj0t"]
+[ext_resource type="Texture2D" uid="uid://cae2ua0xxdmcy" path="res://assests/bed.png" id="3_k1v8o"]
+[ext_resource type="Texture2D" uid="uid://c3i5yl5v5tof5" path="res://assests/closet.png" id="4_hn28k"]
+[ext_resource type="Texture2D" uid="uid://spnjnhf3upcj" path="res://assests/timmy1.png" id="5_22wc0"]
+[ext_resource type="PackedScene" uid="uid://cormxnh6f1dkb" path="res://todolist.tscn" id="6_dh6i8"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="7_k1v8o"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="8_hn28k"]
+
+[node name="BedroomFinalBad" type="Node2D" unique_id=191138988]
+script = ExtResource("1_l1r5l")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1896729387]
+offset_left = -1725.0
+offset_top = -976.0
+offset_right = 1712.0
+offset_bottom = 959.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1761753943]
+zoom = Vector2(0.35, 0.35)
+
+[node name="Bedroom" type="Sprite2D" parent="." unique_id=45000440]
+position = Vector2(1, -2)
+scale = Vector2(2, 2)
+texture = ExtResource("2_hwj0t")
+
+[node name="Bed" type="Sprite2D" parent="Bedroom" unique_id=2051167499]
+position = Vector2(163.93, -159.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_k1v8o")
+
+[node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=1337109902]
+position = Vector2(297.625, 74.5)
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("4_hn28k")
+
+[node name="Timmy1" type="Sprite2D" parent="." unique_id=2048553513]
+position = Vector2(329, -322)
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("5_22wc0")
+
+[node name="Todolist" parent="." unique_id=136832373 instance=ExtResource("6_dh6i8")]
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("7_k1v8o")]
+text_queue = Array[String](["Oh, it was just a dream.", "Let me just check my todo list again to make sure.", "Aw man, didn't finish the chores.", "Oh, looks like someone is home.", "..."])
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("8_hn28k")]

@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bc0ny25ebxvn0"]
+[gd_scene format=4 uid="uid://bc0ny25ebxvn0"]
 
 [ext_resource type="Script" uid="uid://c2t38q4ktden7" path="res://rooms/living_room.gd" id="1_vsc2m"]
+[ext_resource type="Texture2D" uid="uid://b1v0oaydfxn8l" path="res://assests/trash2.png" id="2_4y4u7"]
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_g8umw"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_ewctb"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_g8umw"]
@@ -10,6 +11,149 @@
 [ext_resource type="PackedScene" uid="uid://8re3pcs6mb7y" path="res://trash2.tscn" id="8_73bni"]
 [ext_resource type="PackedScene" uid="uid://bcumu61fwia8t" path="res://trash3.tscn" id="9_u2cia"]
 [ext_resource type="Texture2D" uid="uid://b2mnnp108s3t6" path="res://assests/photofall.png" id="10_rfcl0"]
+[ext_resource type="FontFile" uid="uid://bp4n4usarkk8d" path="res://assests/20210711_pizel.ttf" id="11_rfcl0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4br3"]
+texture = ExtResource("2_4y4u7")
+texture_region_size = Vector2i(64, 64)
+4:0/0 = 0
+5:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_fb7xc"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_k4br3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73bni"]
 size = Vector2(57.600006, 48.93333)
@@ -17,6 +161,10 @@ size = Vector2(57.600006, 48.93333)
 [node name="LivingRoom" type="Node2D" unique_id=824796416 node_paths=PackedStringArray("trash")]
 script = ExtResource("1_vsc2m")
 trash = [NodePath("Trash"), NodePath("Trash2"), NodePath("Trash3"), NodePath("Trash4"), NodePath("Trash5"), NodePath("Trash6"), NodePath("Trash7")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1305323298]
+tile_map_data = PackedByteArray("AADw//H/AAAAAAAAAAD6//H/AAAAAAAAAAD7//H/AAAAAAAAAAD8//H/AAAAAAAAAAD9//H/AAAAAAAAAAD+//H/AAAAAAAAAAD///H/AAAAAAAAAAAAAPH/AAAAAAAAAAABAPH/AAAAAAAAAAACAPH/AAAAAAAAAAADAPH/AAAAAAAAAAAEAPH/AAAAAAAAAAAFAPH/AAAAAAAAAAAGAPH/AAAAAAAAAAAHAPH/AAAAAAAAAAAIAPH/AAAAAAAAAAAJAPH/AAAAAAAAAAAKAPH/AAAAAAAAAAALAPH/AAAAAAAAAAAMAPH/AAAAAAAAAAANAPH/AAAAAAAAAAAOAPH/AAAAAAAAAAAPAPH/AAAAAAAAAAAQAPH/AAAAAAAAAAAQAPL/AAAAAAAAAAAQAPP/AAAAAAAAAAAQAPT/AAAAAAAAAAAQAPX/AAAAAAAAAAAQAPb/AAAAAAAAAAAQAPf/AAAAAAAAAAAQAPj/AAAAAAAAAAAQAPn/AAAAAAAAAAAQAPr/AAAAAAAAAAAQAPv/AAAAAAAAAAAQAPz/AAAAAAAAAAAQAP3/AAAAAAAAAAAQAP7/AAAAAAAAAAAQAP//AAAAAAAAAAAQAAAAAAAAAAAAAAAQAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAkAAAAAAAAAAAAQAAoAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAAAAAAAAAAQAA4AAAAAAAAAAAAQAA8AAAAAAAAAAAAQABAAAAAAAAAAAAAQABEAAAAAAAAAAAAQABIAAAAAAAAAAAAQABMAAAAAAAAAAAAPABMAAAAAAAAAAAAOABMAAAAAAAAAAAANABMAAAAAAAAAAAAMABMAAAAAAAAAAAALABMAAAAAAAAAAAAKABMAAAAAAAAAAAAJABMAAAAAAAAAAAAIABMAAAAAAAAAAAAHABMAAAAAAAAAAAAGABMAAAAAAAAAAAAFABMAAAAAAAAAAAAEABMAAAAAAAAAAAADABMAAAAAAAAAAAACABMAAAAAAAAAAAABABMAAAAAAAAAAAAAABMAAAAAAAAAAAD//xMAAAAAAAAAAAD+/xMAAAAAAAAAAAD9/xMAAAAAAAAAAAD8/xMAAAAAAAAAAAD7/xMAAAAAAAAAAAD6/xMAAAAAAAAAAAD5/xMAAAAAAAAAAAD4/xMAAAAAAAAAAAD3/xMAAAAAAAAAAAD2/xMAAAAAAAAAAAD1/xMAAAAAAAAAAAD0/xMAAAAAAAAAAADz/xMAAAAAAAAAAADy/xMAAAAAAAAAAADx/xMAAAAAAAAAAADw/xMAAAAAAAAAAADw/xIAAAAAAAAAAADw/xEAAAAAAAAAAADw/xAAAAAAAAAAAADw/w8AAAAAAAAAAADw/w4AAAAAAAAAAADw/w0AAAAAAAAAAADw/wwAAAAAAAAAAADw/wsAAAAAAAAAAADw/woAAAAAAAAAAADw/wkAAAAAAAAAAADw/wgAAAAAAAAAAADw/wcAAAAAAAAAAADw/wYAAAAAAAAAAADw/wUAAAAAAAAAAADw/wQAAAAAAAAAAADw/wMAAAAAAAAAAADw/wIAAAAAAAAAAADw/wEAAAAAAAAAAADw/wAAAAAAAAAAAADw////AAAAAAAAAADw//7/AAAAAAAAAADw//3/AAAAAAAAAADw//z/AAAAAAAAAADw//v/AAAAAAAAAADw//r/AAAAAAAAAADw//n/AAAAAAAAAADw//j/AAAAAAAAAADw//f/AAAAAAAAAADw//b/AAAAAAAAAADw//X/AAAAAAAAAADw//T/AAAAAAAAAADw//P/AAAAAAAAAADw//L/AAAAAAAAAADw//D/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_fb7xc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2069662428]
 offset_left = -2345.0
@@ -80,6 +228,7 @@ position = Vector2(376, 152)
 position = Vector2(-1221, 805)
 rotation = -1.5707964
 scale = Vector2(2, 2)
+skew = -0.34906584
 
 [node name="Trash8" parent="." unique_id=2077319738 instance=ExtResource("8_73bni")]
 position = Vector2(-362, 148)
@@ -102,9 +251,19 @@ position = Vector2(88, 320)
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_g8umw")]
 
 [node name="Photofall" type="Sprite2D" parent="." unique_id=357194388]
+visible = false
 position = Vector2(-799.99994, -782.99994)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("10_rfcl0")
+
+[node name="Label" type="Label" parent="." unique_id=215168940]
+offset_left = 1598.0
+offset_top = -1248.0
+offset_right = 1836.0
+offset_bottom = -1148.0
+theme_override_fonts/font = ExtResource("11_rfcl0")
+theme_override_font_sizes/font_size = 100
+text = "Text"
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Desk" to="." method="_on_desk_body_entered"]

@@ -14,6 +14,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Label.text = Global.text
 	if eating:
 		player.set_physics_process(false)
 	else:

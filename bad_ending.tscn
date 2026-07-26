@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dpi4qbdgdq447"]
+
+[ext_resource type="Script" uid="uid://eyeirb6c1cld" path="res://bad_ending.gd" id="1_msjbc"]
+[ext_resource type="Texture2D" uid="uid://clqivv0lom8o5" path="res://bathroom.png" id="1_qfb3n"]
+[ext_resource type="Texture2D" uid="uid://q2jn8qnael5s" path="res://assests/bloodbath2.png" id="2_1m3bu"]
+[ext_resource type="Texture2D" uid="uid://spnjnhf3upcj" path="res://assests/timmy1.png" id="3_msjbc"]
+[ext_resource type="PackedScene" uid="uid://cormxnh6f1dkb" path="res://todolist.tscn" id="4_5ari3"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_5ari3"]
+
+[node name="BadEnding" type="Node2D" unique_id=73903281]
+script = ExtResource("1_msjbc")
+
+[node name="Bathroom" type="Sprite2D" parent="." unique_id=2110342714]
+position = Vector2(492, 642.00006)
+scale = Vector2(2.0671093, 2.0016797)
+texture = ExtResource("1_qfb3n")
+
+[node name="Bloodbath2" type="Sprite2D" parent="." unique_id=1023906051]
+position = Vector2(584, 387.00003)
+scale = Vector2(0.71799994, 0.744)
+texture = ExtResource("2_1m3bu")
+
+[node name="Timmy1" type="Sprite2D" parent="Bloodbath2" unique_id=265740478]
+position = Vector2(12.534851, -225.80652)
+rotation = 1.5707964
+scale = Vector2(0.40465558, 1.3927578)
+texture = ExtResource("3_msjbc")
+
+[node name="ColorRect" type="ColorRect" parent="Bloodbath2" unique_id=964935004]
+anchors_preset = -1
+anchor_left = 0.2771588
+anchor_top = 0.22983868
+anchor_right = 0.5598886
+anchor_bottom = 0.3333333
+offset_left = -500.0
+offset_top = -500.0
+offset_right = -500.0
+offset_bottom = -500.0
+color = Color(0.93333334, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Todolist" parent="." unique_id=136832373 instance=ExtResource("4_5ari3")]
+todolist = Array[String](["YOU DIED"])
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_5ari3")]

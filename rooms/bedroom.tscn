@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://0lr0sbe622gp" path="res://rooms/bedroom.gd" id="1_78uxc"]
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_cns8q"]
-[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_cns8q"]
 [ext_resource type="Texture2D" uid="uid://cae2ua0xxdmcy" path="res://assests/bed.png" id="3_csdsa"]
 [ext_resource type="Texture2D" uid="uid://c3i5yl5v5tof5" path="res://assests/closet.png" id="4_g1xlt"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_cns8q"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="7_csdsa"]
+[ext_resource type="Texture2D" uid="uid://spnjnhf3upcj" path="res://assests/timmy1.png" id="7_g1xlt"]
+[ext_resource type="PackedScene" uid="uid://cormxnh6f1dkb" path="res://todolist.tscn" id="8_i7dl8"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="9_i7dl8"]
 
 [node name="Bedroom" type="Node2D" unique_id=112134652]
 script = ExtResource("1_78uxc")
@@ -35,9 +37,6 @@ position = Vector2(286.78, 147.39)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_g1xlt")
 
-[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("3_cns8q")]
-position = Vector2(-402, 368)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=583784268]
 zoom = Vector2(0.35, 0.35)
 
@@ -46,3 +45,15 @@ zoom = Vector2(0.35, 0.35)
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("7_csdsa")]
 position = Vector2(-407, 701)
 rotation = 3.1415927
+
+[node name="Timmy1" type="Sprite2D" parent="." unique_id=83820694]
+position = Vector2(-12.000015, 317)
+scale = Vector2(0.545, 0.545)
+texture = ExtResource("7_g1xlt")
+
+[node name="Todolist" parent="." unique_id=136832373 instance=ExtResource("8_i7dl8")]
+todolist = Array[String](["RUN"])
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("9_i7dl8")]
+visible = false
+text_queue = Array[String](["Aren't you forgetting something?", "Check your list..."])

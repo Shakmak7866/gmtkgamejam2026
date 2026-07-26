@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bk2xntxohs65e" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://bulhctu0urjju" path="res://assests/timmy_sprite.png" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://cormxnh6f1dkb" path="res://todolist.tscn" id="3_i3pqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqtel"]
 radius = 78.025635
@@ -74,3 +75,6 @@ hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2100974058]
 libraries/ = SubResource("AnimationLibrary_sweqy")
+
+[node name="Todolist" parent="." unique_id=136832373 instance=ExtResource("3_i3pqv")]
+visible = false

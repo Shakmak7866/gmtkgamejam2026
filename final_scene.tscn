@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bljkjqbe2brm8"]
+
+[ext_resource type="Texture2D" uid="uid://b2unyhcwwcro8" path="res://assests/closet_sprite.png" id="1_jremd"]
+[ext_resource type="Script" uid="uid://1x50jar8x6un" path="res://final_scene.gd" id="1_vh3px"]
+[ext_resource type="Texture2D" uid="uid://cgsxjb62gc53k" path="res://assests/1784943433902.png" id="2_vh3px"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="4_iu4q0"]
+[ext_resource type="PackedScene" uid="uid://cormxnh6f1dkb" path="res://todolist.tscn" id="5_4u0mm"]
+
+[sub_resource type="Animation" id="Animation_iu4q0"]
+resource_name = "Final"
+length = 5.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 2.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666666, 0.8333333, 1.4333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_4u0mm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdbl0"]
+_data = {
+&"Final": SubResource("Animation_iu4q0"),
+&"RESET": SubResource("Animation_4u0mm")
+}
+
+[node name="EndScene" type="Node2D" unique_id=927934154]
+script = ExtResource("1_vh3px")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=440666495]
+offset_right = 1164.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1892680378]
+position = Vector2(600, 324)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("1_jremd")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2022763790]
+libraries/ = SubResource("AnimationLibrary_sdbl0")
+
+[node name="hand" type="Sprite2D" parent="." unique_id=2123529482]
+position = Vector2(578.99994, 405.00003)
+rotation = 3.1415927
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("2_vh3px")
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("4_iu4q0")]
+visible = false
+text_queue = Array[String](["...", "Timmy, I see you.", "...", "Get Away from my son."])
+
+[node name="DialogBox2" parent="." unique_id=958062252 instance=ExtResource("4_iu4q0")]
+visible = false
+text_queue = Array[String](["Get Away from my son."])
+
+[node name="Todolist" parent="." unique_id=136832373 instance=ExtResource("5_4u0mm")]
+todolist = Array[String](["You Survived!", "Mom Saved You", "Thank You for Playing", ""])

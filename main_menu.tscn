@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://d4b6vll557dsr"]
 
 [ext_resource type="Script" uid="uid://bul8b2dn5qorf" path="res://main_menu.gd" id="1_7vrkn"]
-[ext_resource type="Texture2D" uid="uid://bb3qfpc6tkras" path="res://mainmenu_temp.png" id="2_fu7sn"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bjm6upy4e3rkj" path="res://assests/baseroom.png" id="3_nlkkf"]
+[ext_resource type="Theme" uid="uid://mtshdix6fige" path="res://assests/button_theme.tres" id="4_jix8l"]
+[ext_resource type="FontFile" uid="uid://bp4n4usarkk8d" path="res://assests/20210711_pizel.ttf" id="5_glbon"]
+[ext_resource type="Texture2D" uid="uid://spnjnhf3upcj" path="res://assests/timmy1.png" id="6_qe12f"]
 
 [node name="MainMenu" type="Control" unique_id=2121918821]
 layout_mode = 3
@@ -22,7 +25,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_fu7sn")
+texture = ExtResource("3_nlkkf")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Start" type="Button" parent="." unique_id=2092514957]
 layout_mode = 1
@@ -36,6 +41,8 @@ offset_top = -0.22402954
 offset_right = 0.09597778
 offset_bottom = -0.2960205
 grow_vertical = 2
+theme = ExtResource("4_jix8l")
+theme_override_fonts/font = ExtResource("5_glbon")
 text = "Start"
 
 [node name="Quit" type="Button" parent="." unique_id=844696238]
@@ -49,7 +56,39 @@ offset_left = -0.3040161
 offset_top = -0.27999878
 offset_right = -0.016052246
 offset_bottom = -0.056030273
+theme = ExtResource("4_jix8l")
+theme_override_fonts/font = ExtResource("5_glbon")
 text = "Quit"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2135095389]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35300002
+anchor_top = 0.349
+anchor_right = 0.591
+anchor_bottom = 0.772
+offset_left = 0.34399414
+offset_top = -0.15200806
+offset_right = -233.83203
+offset_bottom = -234.25601
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6.86, 6.86)
+texture = ExtResource("6_qe12f")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1033667127]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.252
+offset_bottom = -0.29600525
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_glbon")
+theme_override_font_sizes/font_size = 60
+text = "CHORES WITH TIMMY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

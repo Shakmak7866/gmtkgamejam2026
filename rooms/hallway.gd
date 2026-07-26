@@ -7,11 +7,14 @@ extends Node2D
 func _ready() -> void:
 	transition.play("fade_out")
 	await transition.animation_finished
+	$DialogBox.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$Label.text = Global.text
+	if $DialogBox.text_queue.is_empty():
+		Global.game_start = true
 
 
 func _on_door_body_entered(body: Node2D) -> void:

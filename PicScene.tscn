@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dnixggftuqsyb"]
+
+[ext_resource type="Texture2D" uid="uid://dvg0qwigaw2fi" path="res://assests/picture.png" id="1_f7xuy"]
+[ext_resource type="Script" uid="uid://bxmpv3i7icnda" path="res://pic_scene.gd" id="1_n1wdm"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="2_n1wdm"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2127106317]
+script = ExtResource("1_n1wdm")
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("2_n1wdm")]
+text_queue = Array[String](["It's a photo of mom holding your hand as a baby.", ""])
+
+[node name="Control" type="Control" parent="." unique_id=1308954184]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.70679015
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=21443343]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.99999994
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=496088531]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14409722
+anchor_right = 0.8784722
+anchor_bottom = 0.99691355
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35286137, 0.11212728, 0.027824724, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2109830926]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26041666
+anchor_top = 0.050218336
+anchor_right = 0.7855903
+anchor_bottom = 0.9609749
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f7xuy")
+expand_mode = 3
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true

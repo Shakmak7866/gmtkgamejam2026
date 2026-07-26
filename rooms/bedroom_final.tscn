@@ -1,11 +1,76 @@
 [gd_scene format=3 uid="uid://56gxvv4apgvf"]
 
+[ext_resource type="Script" uid="uid://caa8rwdrvitro" path="res://rooms/bedroom_final.gd" id="1_xxdcv"]
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="1_ynayg"]
-[ext_resource type="Texture2D" uid="uid://b76k1tjmeav7w" path="res://dunk.jpg" id="2_xxdcv"]
-[ext_resource type="Texture2D" uid="uid://dxameo872geqc" path="res://icon.svg" id="3_xndt8"]
-[ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="4_uhj58"]
+[ext_resource type="Texture2D" uid="uid://cae2ua0xxdmcy" path="res://assests/bed.png" id="3_xxdcv"]
+[ext_resource type="Texture2D" uid="uid://c3i5yl5v5tof5" path="res://assests/closet.png" id="4_xndt8"]
+[ext_resource type="Texture2D" uid="uid://spnjnhf3upcj" path="res://assests/timmy1.png" id="5_xndt8"]
+[ext_resource type="PackedScene" uid="uid://cormxnh6f1dkb" path="res://todolist.tscn" id="6_uhj58"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="7_uhj58"]
+
+[sub_resource type="Animation" id="Animation_xxdcv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Timmy1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(329, -322)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Timmy1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xndt8"]
+resource_name = "hide"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Timmy1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.02, 2.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(329, -322), Vector2(489, -322), Vector2(489, 150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Timmy1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.09),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhj58"]
+_data = {
+&"RESET": SubResource("Animation_xxdcv"),
+&"hide": SubResource("Animation_xndt8")
+}
 
 [node name="BedroomFinal" type="Node2D" unique_id=191138988]
+script = ExtResource("1_xxdcv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1896729387]
 offset_left = -1725.0
@@ -24,15 +89,27 @@ position = Vector2(1, -2)
 scale = Vector2(2, 2)
 texture = ExtResource("1_ynayg")
 
-[node name="Dunk" type="Sprite2D" parent="Bedroom" unique_id=2051167499]
-position = Vector2(171.5, -159.5)
-scale = Vector2(0.115, 0.115)
-texture = ExtResource("2_xxdcv")
+[node name="Bed" type="Sprite2D" parent="Bedroom" unique_id=2051167499]
+position = Vector2(163.93, -159.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_xxdcv")
 
 [node name="Icon" type="Sprite2D" parent="Bedroom" unique_id=1337109902]
-position = Vector2(305.5, 74.5)
-scale = Vector2(0.5, 1.1601563)
-texture = ExtResource("3_xndt8")
+position = Vector2(297.625, 74.5)
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("4_xndt8")
 
-[node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("4_uhj58")]
-position = Vector2(355, -324)
+[node name="Timmy1" type="Sprite2D" parent="." unique_id=2048553513]
+position = Vector2(329, -322)
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("5_xndt8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1215709381]
+libraries/ = SubResource("AnimationLibrary_uhj58")
+
+[node name="Todolist" parent="." unique_id=136832373 instance=ExtResource("6_uhj58")]
+todolist = Array[String](["HIDE"])
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("7_uhj58")]
+visible = false
+text_queue = Array[String](["I guess it was a dream.", "Let me just check my list to make sure."])

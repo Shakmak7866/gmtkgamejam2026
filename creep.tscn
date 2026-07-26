@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cb5lipteijbar"]
+
+[ext_resource type="Script" uid="uid://pd0aplq3t1ff" path="res://creep.gd" id="1_2gi2j"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="1_5pn00"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1601045177]
+script = ExtResource("1_2gi2j")
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("1_5pn00")]
+text_queue = Array[String](["...", "Timmy, I see you", ""])

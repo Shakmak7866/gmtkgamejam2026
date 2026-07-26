@@ -1,12 +1,156 @@
-[gd_scene format=3 uid="uid://27ksbbvtat4s"]
+[gd_scene format=4 uid="uid://27ksbbvtat4s"]
 
 [ext_resource type="Script" uid="uid://bvata31d81sx1" path="res://rooms/bathroom.gd" id="1_px0fc"]
 [ext_resource type="Texture2D" uid="uid://clqivv0lom8o5" path="res://bathroom.png" id="2_en77f"]
+[ext_resource type="Texture2D" uid="uid://b1v0oaydfxn8l" path="res://assests/trash2.png" id="2_fup3h"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="2_wq0g2"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_px0fc"]
 [ext_resource type="Texture2D" uid="uid://dg8lvaqwy88m0" path="res://assests/sink.png" id="5_en77f"]
 [ext_resource type="Texture2D" uid="uid://dmr8cndvp3bwf" path="res://assests/bathsprite.png" id="6_3xuc0"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="7_en77f"]
+[ext_resource type="FontFile" uid="uid://bp4n4usarkk8d" path="res://assests/20210711_pizel.ttf" id="8_3xuc0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpfer"]
+texture = ExtResource("2_fup3h")
+texture_region_size = Vector2i(64, 64)
+4:0/0 = 0
+5:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ynwq7"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jpfer")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fup3h"]
 size = Vector2(98.31712, 72.25746)
@@ -14,8 +158,52 @@ size = Vector2(98.31712, 72.25746)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpfer"]
 size = Vector2(395.98016, 192.82794)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynwq7"]
+size = Vector2(1092, 52)
+
+[sub_resource type="Animation" id="Animation_fup3h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bath/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jpfer"]
+resource_name = "blood"
+length = 1.5415
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bath/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 1.2666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ynwq7"]
+_data = {
+&"RESET": SubResource("Animation_fup3h"),
+&"blood": SubResource("Animation_jpfer")
+}
+
 [node name="Bathroom" type="Node2D" unique_id=331719233]
 script = ExtResource("1_px0fc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=387062524]
+tile_map_data = PackedByteArray("AAD1//T/AAAAAAAAAAD2//T/AAAAAAAAAAD3//T/AAAAAAAAAAD4//T/AAAAAAAAAAD5//T/AAAAAAAAAAD6//T/AAAAAAAAAAD7//T/AAAAAAAAAAD8//T/AAAAAAAAAAD9//T/AAAAAAAAAAD+//T/AAAAAAAAAAD///T/AAAAAAAAAAAAAPT/AAAAAAAAAAABAPT/AAAAAAAAAAACAPT/AAAAAAAAAAADAPT/AAAAAAAAAAAEAPT/AAAAAAAAAAAFAPT/AAAAAAAAAAAGAPT/AAAAAAAAAAAHAPT/AAAAAAAAAAAIAPT/AAAAAAAAAAAJAPT/AAAAAAAAAAAKAPT/AAAAAAAAAAALAPT/AAAAAAAAAAALAPX/AAAAAAAAAAALAPb/AAAAAAAAAAALAPf/AAAAAAAAAAALAPj/AAAAAAAAAAALAPn/AAAAAAAAAAALAPr/AAAAAAAAAAALAPv/AAAAAAAAAAALAPz/AAAAAAAAAAALAP3/AAAAAAAAAAALAP7/AAAAAAAAAAALAP//AAAAAAAAAAALAAAAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAALAAoAAAAAAAAAAAALAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAAJAAsAAAAAAAAAAAAIAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAADAAsAAAAAAAAAAAACAAsAAAAAAAAAAAABAAsAAAAAAAAAAAAAAAsAAAAAAAAAAAD//wsAAAAAAAAAAAD+/wsAAAAAAAAAAAD9/wsAAAAAAAAAAAD8/wsAAAAAAAAAAAD7/wsAAAAAAAAAAAD6/wsAAAAAAAAAAAD5/wsAAAAAAAAAAAD4/wsAAAAAAAAAAAD3/wsAAAAAAAAAAAD2/wsAAAAAAAAAAAD1/wsAAAAAAAAAAAD1/woAAAAAAAAAAAD1/wkAAAAAAAAAAAD1/wgAAAAAAAAAAAD1/wcAAAAAAAAAAAD1/wYAAAAAAAAAAAD1/wUAAAAAAAAAAAD1/wQAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wAAAAAAAAAAAAD1////AAAAAAAAAAD1//7/AAAAAAAAAAD1//3/AAAAAAAAAAD1//z/AAAAAAAAAAD1//v/AAAAAAAAAAD1//r/AAAAAAAAAAD1//n/AAAAAAAAAAD1//j/AAAAAAAAAAD1//f/AAAAAAAAAAD1//b/AAAAAAAAAAD1//X/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ynwq7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1403945203]
 offset_left = -1699.0
@@ -70,8 +258,28 @@ zoom = Vector2(0.35, 0.35)
 
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("7_en77f")]
 
+[node name="Label" type="Label" parent="." unique_id=1427444690]
+offset_left = 1071.0
+offset_top = -896.0
+offset_right = 1309.0
+offset_bottom = -796.0
+theme_override_fonts/font = ExtResource("8_3xuc0")
+theme_override_font_sizes/font_size = 100
+text = "Text"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=597661532]
+position = Vector2(4, 285)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1012450955]
+shape = SubResource("RectangleShape2D_ynwq7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1817146944]
+libraries/ = SubResource("AnimationLibrary_ynwq7")
+
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="Toothbrush" to="." method="_on_toothbrush_body_entered"]
 [connection signal="body_exited" from="Toothbrush" to="." method="_on_toothbrush_body_exited"]
 [connection signal="body_entered" from="Bath" to="." method="_on_bath_body_entered"]
 [connection signal="body_exited" from="Bath" to="." method="_on_bath_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

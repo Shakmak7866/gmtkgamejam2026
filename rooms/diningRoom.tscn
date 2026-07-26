@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bjp4uty3yb33i"]
+[gd_scene format=4 uid="uid://bjp4uty3yb33i"]
 
 [ext_resource type="Script" uid="uid://ctxkddbvma05n" path="res://rooms/dining_room.gd" id="1_x2tpo"]
+[ext_resource type="Texture2D" uid="uid://b1v0oaydfxn8l" path="res://assests/trash2.png" id="2_dypkc"]
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="2_nok4x"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="3_nok4x"]
 [ext_resource type="Texture2D" uid="uid://hg5pv2dpr5uj" path="res://assests/dinnertable.png" id="3_rf3at"]
@@ -8,6 +9,149 @@
 [ext_resource type="Texture2D" uid="uid://bx1if8cp3qcu1" path="res://assests/cleandish.png" id="5_dypkc"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="5_pq6ch"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="6_nok4x"]
+[ext_resource type="FontFile" uid="uid://bp4n4usarkk8d" path="res://assests/20210711_pizel.ttf" id="9_65ouq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dypkc"]
+texture = ExtResource("2_dypkc")
+texture_region_size = Vector2i(64, 64)
+4:0/0 = 0
+5:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ed7j6"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dypkc")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dypkc"]
 size = Vector2(321, 743)
@@ -17,6 +161,10 @@ size = Vector2(83.5, 84.5)
 
 [node name="Node2D" type="Node2D" unique_id=658309079]
 script = ExtResource("1_x2tpo")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1306473072]
+tile_map_data = PackedByteArray("AAALAAsAAAAAAAAAAAALAAoAAAAAAAAAAAALAAkAAAAAAAAAAAALAAgAAAAAAAAAAAALAAcAAAAAAAAAAAALAAYAAAAAAAAAAAALAAUAAAAAAAAAAAALAAQAAAAAAAAAAAALAAMAAAAAAAAAAAALAAIAAAAAAAAAAAALAAEAAAAAAAAAAAALAAAAAAAAAAAAAAALAP//AAAAAAAAAAALAP7/AAAAAAAAAAALAP3/AAAAAAAAAAALAPz/AAAAAAAAAAALAPv/AAAAAAAAAAALAPr/AAAAAAAAAAALAPn/AAAAAAAAAAALAPj/AAAAAAAAAAALAPf/AAAAAAAAAAALAPb/AAAAAAAAAAALAPX/AAAAAAAAAAALAPT/AAAAAAAAAAAKAPT/AAAAAAAAAAAJAPT/AAAAAAAAAAAIAPT/AAAAAAAAAAAHAPT/AAAAAAAAAAAGAPT/AAAAAAAAAAAFAPT/AAAAAAAAAAAEAPT/AAAAAAAAAAADAPT/AAAAAAAAAAACAPT/AAAAAAAAAAABAPT/AAAAAAAAAAAAAPT/AAAAAAAAAAD///T/AAAAAAAAAAD+//T/AAAAAAAAAAD9//T/AAAAAAAAAAD8//T/AAAAAAAAAAD7//T/AAAAAAAAAAD6//T/AAAAAAAAAAD5//T/AAAAAAAAAAD4//T/AAAAAAAAAAD3//T/AAAAAAAAAAD2//T/AAAAAAAAAAD1//T/AAAAAAAAAAD1//X/AAAAAAAAAAD1//b/AAAAAAAAAAD1//f/AAAAAAAAAAD1//j/AAAAAAAAAAD1//n/AAAAAAAAAAD1//r/AAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAD1/wUAAAAAAAAAAAD1/wYAAAAAAAAAAAD1/wcAAAAAAAAAAAD1/wgAAAAAAAAAAAD1/wkAAAAAAAAAAAD1/woAAAAAAAAAAAD1/wsAAAAAAAAAAAD2/wsAAAAAAAAAAAD3/wsAAAAAAAAAAAD4/wsAAAAAAAAAAAD5/wsAAAAAAAAAAAD6/wsAAAAAAAAAAAD7/wsAAAAAAAAAAAD8/wsAAAAAAAAAAAD9/wsAAAAAAAAAAAD+/wsAAAAAAAAAAAD//wsAAAAAAAAAAAAAAAsAAAAAAAAAAAABAAsAAAAAAAAAAAACAAsAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAIAAsAAAAAAAAAAAAJAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ed7j6")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1415154625]
 offset_left = -2133.0
@@ -72,8 +220,18 @@ zoom = Vector2(0.3, 0.3)
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("6_nok4x")]
 
 [node name="Door2" parent="." unique_id=101576347 instance=ExtResource("5_pq6ch")]
-position = Vector2(829, 384)
+position = Vector2(821, 422)
 rotation = 1.5707964
+skew = 0.34906584
+
+[node name="Label" type="Label" parent="." unique_id=190050924]
+offset_left = 1081.0
+offset_top = -1042.0
+offset_right = 1319.0
+offset_bottom = -942.0
+theme_override_fonts/font = ExtResource("9_65ouq")
+theme_override_font_sizes/font_size = 100
+text = "Text"
 
 [connection signal="body_entered" from="Dinner" to="." method="_on_dinner_body_entered"]
 [connection signal="body_exited" from="Dinner" to="." method="_on_dinner_body_exited"]

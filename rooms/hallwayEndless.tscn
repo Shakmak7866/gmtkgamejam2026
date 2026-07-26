@@ -6,10 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://wxkeuakgv6il" path="res://assests/HallLeft.png" id="5_tnbg5"]
 [ext_resource type="Texture2D" uid="uid://dn5xcca5npxph" path="res://assests/HallRight.png" id="6_p0lvt"]
 [ext_resource type="Texture2D" uid="uid://dnp4sedewtycp" path="res://assests/dark_sprite.png" id="7_nqpe1"]
+[ext_resource type="FontFile" uid="uid://cyb20p4tdhc8m" path="res://assests/shlop rg.otf" id="7_p0lvt"]
 [ext_resource type="Texture2D" uid="uid://blpgpdkevk43o" path="res://assests/HallCenter.png" id="7_tslbp"]
+[ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="8_tnbg5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwvkv"]
-size = Vector2(572, 1184)
+size = Vector2(572, 495)
 
 [sub_resource type="Animation" id="Animation_tnbg5"]
 length = 0.001
@@ -50,7 +52,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk544"]
-size = Vector2(74, 922)
+size = Vector2(111, 480)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_p0lvt"]
+a = Vector2(-5919, 1)
 
 [node name="HallwayEndless" type="Node2D" unique_id=1616739569]
 script = ExtResource("1_wk544")
@@ -126,16 +131,28 @@ position = Vector2(1865, -8)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=588981827]
 
+[node name="Label" type="Label" parent="CharacterBody2D" unique_id=1537605345]
+offset_left = 127.33334
+offset_top = -205.33334
+offset_right = 365.33334
+offset_bottom = -105.33334
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_p0lvt")
+theme_override_font_sizes/font_size = 40
+text = "Text"
+horizontal_alignment = 2
+
 [node name="Darkness" type="Area2D" parent="." unique_id=1249081305]
 position = Vector2(2530, 26)
 
 [node name="Dunk" type="Sprite2D" parent="Darkness" unique_id=586236915]
-position = Vector2(48.00006, -10)
+position = Vector2(237.00003, -26.999878)
+scale = Vector2(1.8281249, 1.2041016)
 texture = ExtResource("7_nqpe1")
 hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Darkness" unique_id=165433266]
-position = Vector2(269, -16)
+position = Vector2(269, -25.5)
 shape = SubResource("RectangleShape2D_xwvkv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Darkness" unique_id=978845617]
@@ -145,8 +162,24 @@ libraries/ = SubResource("AnimationLibrary_tslbp")
 position = Vector2(-2662, -436)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine" unique_id=864964517]
-position = Vector2(27, 451)
+position = Vector2(8.5, 424)
 shape = SubResource("RectangleShape2D_wk544")
+
+[node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("8_tnbg5")]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1339792092]
+position = Vector2(2310, -288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1062005248]
+position = Vector2(5, -5)
+shape = SubResource("SegmentShape2D_p0lvt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=930868875]
+position = Vector2(2335, 293)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=68729306]
+position = Vector2(5, -5)
+shape = SubResource("SegmentShape2D_p0lvt")
 
 [connection signal="body_entered" from="Darkness" to="." method="_on_darkness_body_entered"]
 [connection signal="body_entered" from="FinishLine" to="." method="_on_finish_line_body_entered"]

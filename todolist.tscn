@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cormxnh6f1dkb"]
+
+[ext_resource type="Texture2D" uid="uid://cmkymtxmnybgn" path="res://assests/todolist.png" id="1_clv8r"]
+[ext_resource type="Script" uid="uid://dbyggxw1yc6lp" path="res://todolist.gd" id="1_dvo86"]
+[ext_resource type="FontFile" uid="uid://bp4n4usarkk8d" path="res://assests/20210711_pizel.ttf" id="2_p5gs5"]
+[ext_resource type="Theme" uid="uid://mtshdix6fige" path="res://assests/button_theme.tres" id="3_p5gs5"]
+
+[node name="Todolist" type="CanvasLayer" unique_id=136832373]
+script = ExtResource("1_dvo86")
+todolist = Array[String](["1. Dinner", "2. Dishes", "3. Clean Living Room", "4. Brush Teeth", "5. Go To Bed"])
+
+[node name="Control" type="Control" parent="." unique_id=551476301]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=2070821692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=887524463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_clv8r")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control/TextureRect" unique_id=1647976114]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3637153
+anchor_top = 0.030864198
+anchor_right = 0.6380208
+anchor_bottom = 0.94290125
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_p5gs5")
+theme_override_font_sizes/font_size = 30
+text = "TODO LIST"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Control" unique_id=501668659]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -75.75
+offset_right = 56.0
+offset_bottom = -13.75
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_p5gs5")
+theme_override_fonts/font = ExtResource("2_p5gs5")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

@@ -1,13 +1,162 @@
-[gd_scene format=3 uid="uid://yk2pe73jftv5"]
+[gd_scene format=4 uid="uid://yk2pe73jftv5"]
 
 [ext_resource type="Script" uid="uid://cnrnb2684ooma" path="res://rooms/hallway.gd" id="1_hwu5l"]
 [ext_resource type="PackedScene" uid="uid://ctsck3vmr0m6b" path="res://player.tscn" id="2_pf4c8"]
 [ext_resource type="PackedScene" uid="uid://0y4fdyfnnmv5" path="res://transition.tscn" id="2_u7cuw"]
 [ext_resource type="Texture2D" uid="uid://diujwntljpdmr" path="res://baseroom.png" id="3_u7cuw"]
 [ext_resource type="PackedScene" uid="uid://d0c82eovnecua" path="res://door.tscn" id="4_bynws"]
+[ext_resource type="FontFile" uid="uid://bp4n4usarkk8d" path="res://assests/20210711_pizel.ttf" id="6_uqmhb"]
+[ext_resource type="Texture2D" uid="uid://b1v0oaydfxn8l" path="res://assests/trash2.png" id="7_7pmus"]
+[ext_resource type="PackedScene" uid="uid://bhnrsdq0x1r1d" path="res://dialog_box.tscn" id="8_otd5a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acdx2"]
+texture = ExtResource("7_7pmus")
+texture_region_size = Vector2i(64, 64)
+4:0/0 = 0
+5:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_otd5a"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_acdx2")
 
 [node name="Hallway" type="Node2D" unique_id=1585987424]
 script = ExtResource("1_hwu5l")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=455902961]
+tile_map_data = PackedByteArray("AAD3//3/AAAAAAAAAAD3//7/AAAAAAAAAAD3////AAAAAAAAAAD3/wAAAAAAAAAAAAD3/wEAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD3/wUAAAAAAAAAAAD3/wYAAAAAAAAAAAD3/wcAAAAAAAAAAAD3/wgAAAAAAAAAAAD3/wkAAAAAAAAAAAD4/wkAAAAAAAAAAAD5/wkAAAAAAAAAAAD6/wkAAAAAAAAAAAD7/wkAAAAAAAAAAAD8/wkAAAAAAAAAAAD9/wkAAAAAAAAAAAD+/wkAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAD6//b/AAAAAAAAAAD7//b/AAAAAAAAAAD8//b/AAAAAAAAAAD9//b/AAAAAAAAAAD+//b/AAAAAAAAAAD///b/AAAAAAAAAAAAAPb/AAAAAAAAAAABAPb/AAAAAAAAAAACAPb/AAAAAAAAAAADAPb/AAAAAAAAAAAEAPb/AAAAAAAAAAAFAPb/AAAAAAAAAAAGAPb/AAAAAAAAAAAHAPb/AAAAAAAAAAAIAPb/AAAAAAAAAAAJAPb/AAAAAAAAAAAJAPf/AAAAAAAAAAAJAPj/AAAAAAAAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAADAAkAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_otd5a")
 
 [node name="Transition" parent="." unique_id=1053267289 instance=ExtResource("2_u7cuw")]
 
@@ -26,16 +175,30 @@ scale = Vector2(2, 2)
 texture = ExtResource("3_u7cuw")
 
 [node name="CharacterBody2D" parent="." unique_id=1967203293 instance=ExtResource("2_pf4c8")]
-position = Vector2(6, 470)
+position = Vector2(3, 238)
 
 [node name="Door" parent="." unique_id=626891781 instance=ExtResource("4_bynws")]
-position = Vector2(-647, -440)
+position = Vector2(-636, -432)
 rotation = -1.5707964
+skew = 0.34906584
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=107203951]
 zoom = Vector2(0.35, 0.35)
 
 [node name="Door2" parent="." unique_id=738331918 instance=ExtResource("4_bynws")]
 position = Vector2(-2, 729)
+
+[node name="Label" type="Label" parent="." unique_id=6327865]
+offset_left = 873.0
+offset_top = -884.0
+offset_right = 1111.0
+offset_bottom = -784.0
+theme_override_fonts/font = ExtResource("6_uqmhb")
+theme_override_font_sizes/font_size = 100
+text = "Text"
+
+[node name="DialogBox" parent="." unique_id=1588047928 instance=ExtResource("8_otd5a")]
+visible = false
+text_queue = Array[String](["Oh man, I messed up", "Mom and Dad gave me a list of chores to do!", "They are gonna be back in 5 mins!", "Press \"T\" to see the list and E to interact."])
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

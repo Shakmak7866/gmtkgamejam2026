@@ -13,19 +13,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$CharacterBody2D/Label.text = Global.text
 
 
 func _on_bathroom_door_body_entered(body: Node2D) -> void:
-	#if not bathroom_done: # Might need a global variable
-		#bathroom_done = true
-	transition.play("fade_in")
-	await transition.animation_finished
-	get_tree().change_scene_to_file("res://rooms/bathroom.tscn")	
+	if not Global.chores_done:
+		transition.play("fade_in")
+		await transition.animation_finished
+		get_tree().change_scene_to_file("res://rooms/bathroom.tscn")	
 
 
 func _on_bedroom_door_body_entered(body: Node2D) -> void:
-	if bathroom_done:
+	if Global.chores_done:
 		transition.play("fade_in")
 		await transition.animation_finished
 		get_tree().change_scene_to_file("res://rooms/bedroom.tscn")
