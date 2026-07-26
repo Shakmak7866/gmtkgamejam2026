@@ -13,6 +13,7 @@ config_version=5
 config/name="gmtkgamejam2026"
 run/main_scene="uid://d4b6vll557dsr"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/image="uid://spnjnhf3upcj"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -64,3 +65,4 @@ interact={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
